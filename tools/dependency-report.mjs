@@ -59,6 +59,7 @@ function tree() {
 function renderAudit(runtime, all) {
   const buildOnly = [...all.advisories.values()].filter((a) => !runtime.advisories.has(`${a.package}: ${a.title}`));
   const bySeverity = (a, b) => SEVERITY.indexOf(a.severity) - SEVERITY.indexOf(b.severity) || a.package.localeCompare(b.package);
+  const runtimeList = [...runtime.advisories.values()].sort(bySeverity);
 
   const lines = [
     '# Dependency audit — `digital_banking_mock`',
@@ -69,11 +70,14 @@ function renderAudit(runtime, all) {
     '**Build-time** advisories are in tooling that does not. Only the runtime list is gated —',
     'counting them together is how a real finding gets lost in tooling noise.',
     '',
-    `## Runtime — ${runtime.totals.total} advisory instance(s)`,
+    `## Runtime — ${runtimeList.length} distinct advisory/advisories`,
+    '',
+    `npm's own headline is different: it counts vulnerable package paths at their highest severity`,
+    `(${JSON.stringify(runtime.totals)}), so one package carrying four advisories is one entry there`,
+    'and four rows here. The gate counts distinct advisories — the rows below.',
     '',
   ];
 
-  const runtimeList = [...runtime.advisories.values()].sort(bySeverity);
   if (runtimeList.length) {
     lines.push('| Severity | Package | Advisory |', '|---|---|---|');
     for (const a of runtimeList) lines.push(`| ${a.severity} | \`${a.package}\` | ${a.title} |`);

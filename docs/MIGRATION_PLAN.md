@@ -180,7 +180,7 @@ The harness ran against untouched v14 — 15 stories, 3 components — before an
 | **11 × `button-name`, critical** | `bds-button` declares three `<ng-content>` slots. Angular projects into one, so **only `variant="danger"` renders its label** — primary and secondary buttons are blank boxes with no accessible name. The dashboard's "Transfer Funds" and "View Statements" are affected |
 | **2 × `color-contrast`, serious** | The `warning` alert at `#B26A00` on `#FCF1E0` measures 3.79:1 against a 4.5:1 floor |
 | **`<bds-button>` declares 3 content slots** | The same defect from the API side. Visible in `api-report/` as `Content slots: *, *, *` — which is why the API report is worth reading, not just diffing |
-| **11 high-severity runtime advisories** | All in `@angular/*` itself: XSS in `core` and `compiler`, XSRF token leakage and cache poisoning in `common`. None are patchable on v14 |
+| **14 runtime advisories, 10 of them high** | All in `@angular/*` itself: XSS in `core` and `compiler`, XSRF token leakage and cache poisoning in `common`. None are patchable on v14. npm's headline says `11 high` for the same closure — it counts vulnerable package paths, not advisories |
 
 All of it builds green and passes the existing tests. That's the argument for the harness: none is
 findable by compiling, and the button bug isn't findable by a pixel diff either.

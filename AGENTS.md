@@ -174,9 +174,12 @@ don't be alarmed when they persist:
 - **`<bds-button>` declares three content slots** in `api-report/`, which is the same defect seen
   from the API side. Fixing it is a public-API change, so it belongs in its own PR, not a
   migration one.
-- **11 high-severity runtime advisories**, all in `@angular/*` itself — XSS in `core` and
-  `compiler`, XSRF token leakage in `common`. None are patchable on v14; the version walk is the
-  fix. This is the security argument for the migration, not an argument against it.
+- **14 distinct runtime advisories** (10 high, 4 moderate), all in `@angular/*` itself — XSS in
+  `core` and `compiler`, XSRF token leakage and cache poisoning in `common`. None are patchable on
+  v14; the version walk is the fix. This is the security argument for the migration, not an
+  argument against it. npm's own headline for the same closure is `11 high`, because it counts
+  vulnerable package paths at their highest severity rather than advisories — the gate counts
+  advisories.
 - **`advisor-console` loads with no Material core theme at all** (issue #11), so the two consumers
   don't look alike today and phase 2 will land differently in each.
 
