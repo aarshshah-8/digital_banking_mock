@@ -25,6 +25,40 @@ jobs:
 
       - run: npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox
 
+      # Both apps building proves nothing for consumers outside this workspace: they compile
+      # against the published types. Fails if the library's public surface moved silently.
+      - name: Public API surface
+        run: node tools/api-surface.mjs --check
+
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-report
+          path: api-report/
+
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+
+      # Prints what the version walk added, removed and moved, and fails if the shipped
+      # dependency closure gains an advisory. Build-time advisories are reported, not gated.
+      - name: Dependency and audit posture
+        run: node tools/dependency-report.mjs --check
+
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-report
+          path: deps-report/
+
   evidence:
     runs-on: ubuntu-latest
     steps:
@@ -42,10 +76,10 @@ jobs:
 
       # Fails if a story stops rendering, axe violations increase, or any control loses its
       # accessible name, shrinks below 24px, or drops below 4.5:1.
-      - name: Capture and compare against the committed v14 baseline
+      - name: Capture and compare against the current baseline
         run: |
           node tools/storybook-evidence.mjs --label pr
-          node tools/storybook-evidence.mjs --compare before pr
+          node tools/storybook-evidence.mjs --compare baseline pr
 
       - if: always()
         uses: actions/upload-artifact@v4
