@@ -40,8 +40,8 @@ and four rows here. The gate counts distinct advisories — the rows below.
 | — | `playwright` × 1 |
 | — | `postcss` × 3 |
 | — | `serialize-javascript` × 2 |
+| — | `sigstore` × 1 |
 | — | `tmp` × 2 |
-| — | `webpack-dev-middleware` × 1 |
 | — | `@babel/runtime` × 1 |
 | — | `ajv` × 1 |
 | — | `esbuild` × 1 |
@@ -53,6 +53,6 @@ and four rows here. The gate counts distinct advisories — the rows below.
 ## Totals reported by npm
 
 ```
-all:     {"info":0,"low":3,"moderate":22,"high":58,"critical":1,"total":84}
+all:     {"info":0,"low":3,"moderate":22,"high":61,"critical":1,"total":87}
 runtime: {"info":0,"low":0,"moderate":0,"high":10,"critical":0,"total":10}
 ```
