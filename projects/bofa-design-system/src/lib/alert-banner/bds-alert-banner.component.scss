@@ -1,0 +1,19 @@
+.bds-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.bds-alert--info { background: #EAF1FB; color: #0B1B32; }
+.bds-alert--success { background: #E7F5EA; color: #1E7A34; }
+.bds-alert--warning { background: #FCF1E0; color: #B26A00; }
+.bds-alert--danger { background: #FBEAE9; color: #B3261E; }
+
+.bds-alert__icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}

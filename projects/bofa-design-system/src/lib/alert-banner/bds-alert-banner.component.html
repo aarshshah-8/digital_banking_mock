@@ -1,0 +1,13 @@
+<div class="bds-alert" [ngClass]="'bds-alert--' + severity" role="alert">
+  <mat-icon class="bds-alert__icon">
+    <ng-container [ngSwitch]="severity">
+      <ng-container *ngSwitchCase="'success'">check_circle</ng-container>
+      <ng-container *ngSwitchCase="'warning'">warning</ng-container>
+      <ng-container *ngSwitchCase="'danger'">error</ng-container>
+      <ng-container *ngSwitchDefault>info</ng-container>
+    </ng-container>
+  </mat-icon>
+  <div class="bds-alert__content">
+    <ng-content></ng-content>
+  </div>
+</div>
