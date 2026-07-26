@@ -20,8 +20,14 @@ npm install --legacy-peer-deps
 npx ng build bofa-design-system   # build the library first
 npx ng build digital-banking-shell
 npx ng build advisor-console
-npx ng test
+npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox
+npm run storybook          # the component catalog, on :6006
 ```
+
+Headless tests need a real Chrome binary on `CHROME_BIN`. The `google-chrome` on `PATH` in an agent
+session is a shim that drives the desktop browser over CDP, not an executable Karma can launch —
+point it at a real one, e.g. Playwright's:
+`export CHROME_BIN=$(ls ~/.cache/ms-playwright/chromium-*/chrome-linux/chrome | head -1)`.
 
 ## Migration work
 
