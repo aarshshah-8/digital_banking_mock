@@ -6,9 +6,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        One tracking issue per phase. Devin triages it and proposes a PR breakdown; it writes no
-        code until a maintainer adds `devin:approved`. It then works the checklist one PR at a
-        time, or stops with `devin:blocked` if it can't meet the done-when.
+        One tracking issue per phase. Open it nearly empty — Devin reads the code and posts a
+        costed plan as a comment: the PR breakdown, an estimate per PR, the risks, and what could
+        block it. **It writes no code until a maintainer adds `devin:approved`**, so what you are
+        approving is a specific plan at a specific price, not a vague intent.
 
         The phase is finished when every box in **PRs** is checked. Nothing from the next phase
         branches until then.
@@ -38,11 +39,13 @@ body:
     id: prs
     attributes:
       label: PRs
-      description: One line per PR. Devin fills this in at triage if you leave it blank.
+      description: >
+        Leave blank. Devin fills this in at triage with one line per PR and an estimate, then edits
+        the boxes closed as they merge.
       placeholder: |
-        - [ ] Remove @angular/flex-layout
-        - [ ] 14 -> 15
-        - [ ] 15 -> 16
+        | PR | Estimate | Risk |
+        |---|---|---|
+        | Remove @angular/flex-layout | | |
     validations:
       required: false
 

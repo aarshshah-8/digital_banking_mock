@@ -51,11 +51,17 @@ inert, so they're compared with `--strict-pixels`.
 Every phase starts as a GitHub issue opened by a person. The issue is a **tracking issue**: its body
 is a checklist of the PRs the phase needs.
 
-1. **Triage.** Read the code and post a plan as an issue comment: how you'd break the phase into
-   PRs, which consumers each affects, which deleted APIs are in use, and the risks. **Write no code
-   at this stage.**
+1. **Triage.** Read the code and post a **costed plan** as an issue comment. It must contain: the
+   PR breakdown, one row per PR with an estimate and a risk level, which consumers each PR affects,
+   which deleted or archived APIs are in use, and anything that could block. Then edit the issue
+   body's **PRs** section to that checklist. **Write no code at this stage.**
+
+   Estimate two numbers per PR — the Devin session time, and what the same work would take a person
+   who already knows the codebase. Estimate from what you actually read, not from the phase name;
+   if you can't estimate something, say which unknown is in the way rather than padding it.
 2. **Wait for `devin:approved`.** Until that label is present, don't branch, edit files, or open a
-   PR.
+   PR. The label means a human accepted *that plan at that price* — if the work turns out to differ
+   materially from the estimate, stop and re-triage rather than spending past it.
 3. **Execute**, one PR per checklist item, each targeting `migration/angular-18` and referencing the
    tracking issue. Only the last one says `Closes #<issue>`.
 4. **Stop when blocked.** If the change would break a rule in `BRAND_CONTRACT.md`, or needs a
