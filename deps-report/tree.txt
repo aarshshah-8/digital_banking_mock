@@ -1,48 +1,76 @@
 @adobe/css-tools@4.5.0
-@ampproject/remapping@2.2.0
-@angular-devkit/architect/> rxjs@6.6.7
-@angular-devkit/architect/> tslib@1.14.1
-@angular-devkit/architect@0.1502.11
+@ampproject/remapping@2.2.1
+@angular-devkit/architect/> rxjs@7.8.1
+@angular-devkit/architect@0.1602.16
 @angular-devkit/build-angular/> @babel/core/> semver@6.3.1
-@angular-devkit/build-angular/> @babel/core@7.20.12
-@angular-devkit/build-angular/> browserslist@4.21.5
+@angular-devkit/build-angular/> @babel/core@7.22.9
+@angular-devkit/build-angular/> @esbuild/android-arm64@0.18.17
+@angular-devkit/build-angular/> @esbuild/android-arm@0.18.17
+@angular-devkit/build-angular/> @esbuild/android-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/darwin-arm64@0.18.17
+@angular-devkit/build-angular/> @esbuild/darwin-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/freebsd-arm64@0.18.17
+@angular-devkit/build-angular/> @esbuild/freebsd-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-arm64@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-arm@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-ia32@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-loong64@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-mips64el@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-ppc64@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-riscv64@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-s390x@0.18.17
+@angular-devkit/build-angular/> @esbuild/linux-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/netbsd-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/openbsd-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/sunos-x64@0.18.17
+@angular-devkit/build-angular/> @esbuild/win32-arm64@0.18.17
+@angular-devkit/build-angular/> @esbuild/win32-ia32@0.18.17
+@angular-devkit/build-angular/> @esbuild/win32-x64@0.18.17
 @angular-devkit/build-angular/> chokidar@3.5.3
-@angular-devkit/build-angular/> rxjs/> tslib@1.14.1
-@angular-devkit/build-angular/> rxjs@6.6.7
-@angular-devkit/build-angular/> tslib@2.5.0
-@angular-devkit/build-angular@15.2.11
-@angular-devkit/build-webpack/> rxjs@6.6.7
-@angular-devkit/build-webpack/> tslib@1.14.1
-@angular-devkit/build-webpack@0.1502.11
+@angular-devkit/build-angular/> esbuild@0.18.17
+@angular-devkit/build-angular/> fast-glob@3.3.1
+@angular-devkit/build-angular/> lru-cache@6.0.0
+@angular-devkit/build-angular/> picomatch@2.3.1
+@angular-devkit/build-angular/> rxjs@7.8.1
+@angular-devkit/build-angular/> semver@7.5.4
+@angular-devkit/build-angular/> tslib@2.6.1
+@angular-devkit/build-angular/> yallist@4.0.0
+@angular-devkit/build-angular@16.2.16
+@angular-devkit/build-webpack/> rxjs@7.8.1
+@angular-devkit/build-webpack@0.1602.16
 @angular-devkit/core/> ajv@8.12.0
-@angular-devkit/core/> rxjs@6.6.7
-@angular-devkit/core/> tslib@1.14.1
-@angular-devkit/core@15.2.11
-@angular-devkit/schematics/> rxjs@6.6.7
-@angular-devkit/schematics/> tslib@1.14.1
-@angular-devkit/schematics@15.2.11
-@angular/animations@15.2.10
-@angular/cdk@15.2.9
-@angular/cli@15.2.11
-@angular/common@15.2.10
-@angular/compiler-cli/> magic-string@0.27.0
-@angular/compiler-cli@15.2.10
-@angular/compiler@15.2.10
-@angular/core@15.2.10
-@angular/forms@15.2.10
-@angular/material@15.2.9
-@angular/platform-browser-dynamic@15.2.10
-@angular/platform-browser@15.2.10
-@angular/router@15.2.10
+@angular-devkit/core/> picomatch@2.3.1
+@angular-devkit/core/> rxjs@7.8.1
+@angular-devkit/core@16.2.16
+@angular-devkit/schematics/> rxjs@7.8.1
+@angular-devkit/schematics@16.2.16
+@angular/animations@16.2.12
+@angular/cdk@16.2.14
+@angular/cli/> lru-cache@6.0.0
+@angular/cli/> semver@7.5.4
+@angular/cli/> yallist@4.0.0
+@angular/cli@16.2.16
+@angular/common@16.2.12
+@angular/compiler-cli@16.2.12
+@angular/compiler@16.2.12
+@angular/core@16.2.12
+@angular/forms@16.2.12
+@angular/material@16.2.14
+@angular/platform-browser-dynamic@16.2.12
+@angular/platform-browser@16.2.12
+@angular/router@16.2.12
 @assemblyscript/loader@0.10.1
 @aw-web-design/x-default-browser@1.4.126
 @babel/code-frame@7.29.7
 @babel/compat-data@7.29.7
+@babel/core/> @babel/generator@7.29.7
+@babel/core/> @babel/template@7.29.7
+@babel/core/> convert-source-map@2.0.0
+@babel/core/> jsesc@3.1.0
 @babel/core/> semver@6.3.1
-@babel/core@7.19.3
-@babel/generator/> @jridgewell/gen-mapping@0.3.13
-@babel/generator@7.20.14
-@babel/helper-annotate-as-pure@7.18.6
+@babel/core@7.23.2
+@babel/generator@7.22.9
+@babel/helper-annotate-as-pure@7.22.5
 @babel/helper-compilation-targets/> semver@6.3.1
 @babel/helper-compilation-targets@7.29.7
 @babel/helper-create-class-features-plugin/> @babel/helper-annotate-as-pure@7.29.7
@@ -51,8 +79,8 @@
 @babel/helper-create-regexp-features-plugin/> @babel/helper-annotate-as-pure@7.29.7
 @babel/helper-create-regexp-features-plugin/> semver@6.3.1
 @babel/helper-create-regexp-features-plugin@7.29.7
-@babel/helper-define-polyfill-provider/> semver@6.3.1
-@babel/helper-define-polyfill-provider@0.3.3
+@babel/helper-define-polyfill-provider/> resolve@1.22.12
+@babel/helper-define-polyfill-provider@0.6.8
 @babel/helper-environment-visitor@7.24.7
 @babel/helper-globals@7.29.7
 @babel/helper-member-expression-to-functions@7.29.7
@@ -64,7 +92,7 @@
 @babel/helper-remap-async-to-generator@7.29.7
 @babel/helper-replace-supers@7.29.7
 @babel/helper-skip-transparent-expression-wrappers@7.29.7
-@babel/helper-split-export-declaration@7.18.6
+@babel/helper-split-export-declaration@7.22.6
 @babel/helper-string-parser@7.29.7
 @babel/helper-validator-identifier@7.29.7
 @babel/helper-validator-option@7.29.7
@@ -80,19 +108,7 @@
 @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.29.7
 @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@7.29.7
 @babel/plugin-proposal-async-generator-functions@7.20.7
-@babel/plugin-proposal-class-properties@7.18.6
-@babel/plugin-proposal-class-static-block@7.21.0
-@babel/plugin-proposal-dynamic-import@7.18.6
-@babel/plugin-proposal-export-namespace-from@7.18.9
-@babel/plugin-proposal-json-strings@7.18.6
-@babel/plugin-proposal-logical-assignment-operators@7.20.7
-@babel/plugin-proposal-nullish-coalescing-operator@7.18.6
-@babel/plugin-proposal-numeric-separator@7.18.6
-@babel/plugin-proposal-object-rest-spread@7.20.7
-@babel/plugin-proposal-optional-catch-binding@7.18.6
-@babel/plugin-proposal-optional-chaining@7.21.0
-@babel/plugin-proposal-private-methods@7.18.6
-@babel/plugin-proposal-private-property-in-object@7.21.11
+@babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
 @babel/plugin-proposal-unicode-property-regex@7.18.6
 @babel/plugin-syntax-async-generators@7.8.4
 @babel/plugin-syntax-class-properties@7.12.13
@@ -102,6 +118,7 @@
 @babel/plugin-syntax-flow@7.29.7
 @babel/plugin-syntax-import-assertions@7.29.7
 @babel/plugin-syntax-import-attributes@7.29.7
+@babel/plugin-syntax-import-meta@7.10.4
 @babel/plugin-syntax-json-strings@7.8.3
 @babel/plugin-syntax-jsx@7.29.7
 @babel/plugin-syntax-logical-assignment-operators@7.10.4
@@ -116,7 +133,7 @@
 @babel/plugin-syntax-unicode-sets-regex@7.18.6
 @babel/plugin-transform-arrow-functions@7.29.7
 @babel/plugin-transform-async-generator-functions@7.29.7
-@babel/plugin-transform-async-to-generator@7.20.7
+@babel/plugin-transform-async-to-generator@7.22.5
 @babel/plugin-transform-block-scoped-functions@7.29.7
 @babel/plugin-transform-block-scoping@7.29.7
 @babel/plugin-transform-class-properties@7.29.7
@@ -161,7 +178,7 @@
 @babel/plugin-transform-regexp-modifiers@7.29.7
 @babel/plugin-transform-reserved-words@7.29.7
 @babel/plugin-transform-runtime/> semver@6.3.1
-@babel/plugin-transform-runtime@7.19.6
+@babel/plugin-transform-runtime@7.22.9
 @babel/plugin-transform-shorthand-properties@7.29.7
 @babel/plugin-transform-spread@7.29.7
 @babel/plugin-transform-sticky-regex@7.29.7
@@ -174,7 +191,7 @@
 @babel/plugin-transform-unicode-regex@7.29.7
 @babel/plugin-transform-unicode-sets-regex@7.29.7
 @babel/preset-env/> semver@6.3.1
-@babel/preset-env@7.20.2
+@babel/preset-env@7.22.9
 @babel/preset-flow@7.29.7
 @babel/preset-modules@0.1.6
 @babel/preset-typescript@7.29.7
@@ -187,17 +204,17 @@
 @babel/register/> pkg-dir@3.0.0
 @babel/register/> semver@5.7.2
 @babel/register@7.29.7
-@babel/runtime@7.20.13
-@babel/template@7.20.7
+@babel/runtime@7.22.6
+@babel/template@7.22.5
 @babel/traverse/> @babel/generator@7.29.7
 @babel/traverse/> @babel/template@7.29.7
-@babel/traverse/> @jridgewell/gen-mapping@0.3.13
 @babel/traverse/> jsesc@3.1.0
 @babel/traverse@7.29.7
 @babel/types@7.29.7
 @colors/colors@1.5.0
 @discoveryjs/json-ext@0.5.7
 @emotion/use-insertion-effect-with-fallbacks@1.2.0
+@esbuild/aix-ppc64@0.19.12
 @esbuild/android-arm64@0.18.20
 @esbuild/android-arm@0.18.20
 @esbuild/android-x64@0.18.20
@@ -208,7 +225,7 @@
 @esbuild/linux-arm64@0.18.20
 @esbuild/linux-arm@0.18.20
 @esbuild/linux-ia32@0.18.20
-@esbuild/linux-loong64@0.17.8
+@esbuild/linux-loong64@0.18.20
 @esbuild/linux-mips64el@0.18.20
 @esbuild/linux-ppc64@0.18.20
 @esbuild/linux-riscv64@0.18.20
@@ -240,70 +257,67 @@
 @jest/transform/> slash@3.0.0
 @jest/transform@29.7.0
 @jest/types@29.6.3
-@jridgewell/gen-mapping@0.1.1
-@jridgewell/remapping/> @jridgewell/gen-mapping@0.3.13
+@jridgewell/gen-mapping@0.3.13
 @jridgewell/remapping@2.3.5
 @jridgewell/resolve-uri@3.1.2
-@jridgewell/set-array@1.2.1
-@jridgewell/source-map/> @jridgewell/gen-mapping@0.3.13
 @jridgewell/source-map@0.3.11
 @jridgewell/sourcemap-codec@1.5.5
 @jridgewell/trace-mapping@0.3.31
 @juggle/resize-observer@3.4.0
 @leichtgewicht/ip-codec@2.0.5
-@material/animation@15.0.0-canary.684e33d25.0
-@material/auto-init@15.0.0-canary.684e33d25.0
-@material/banner@15.0.0-canary.684e33d25.0
-@material/base@15.0.0-canary.684e33d25.0
-@material/button@15.0.0-canary.684e33d25.0
-@material/card@15.0.0-canary.684e33d25.0
-@material/checkbox@15.0.0-canary.684e33d25.0
-@material/chips@15.0.0-canary.684e33d25.0
-@material/circular-progress@15.0.0-canary.684e33d25.0
-@material/data-table@15.0.0-canary.684e33d25.0
-@material/density@15.0.0-canary.684e33d25.0
-@material/dialog@15.0.0-canary.684e33d25.0
-@material/dom@15.0.0-canary.684e33d25.0
-@material/drawer@15.0.0-canary.684e33d25.0
-@material/elevation@15.0.0-canary.684e33d25.0
-@material/fab@15.0.0-canary.684e33d25.0
-@material/feature-targeting@15.0.0-canary.684e33d25.0
-@material/floating-label@15.0.0-canary.684e33d25.0
-@material/focus-ring@15.0.0-canary.684e33d25.0
-@material/form-field@15.0.0-canary.684e33d25.0
-@material/icon-button@15.0.0-canary.684e33d25.0
-@material/image-list@15.0.0-canary.684e33d25.0
-@material/layout-grid@15.0.0-canary.684e33d25.0
-@material/line-ripple@15.0.0-canary.684e33d25.0
-@material/linear-progress@15.0.0-canary.684e33d25.0
-@material/list@15.0.0-canary.684e33d25.0
-@material/menu-surface@15.0.0-canary.684e33d25.0
-@material/menu@15.0.0-canary.684e33d25.0
-@material/notched-outline@15.0.0-canary.684e33d25.0
-@material/progress-indicator@15.0.0-canary.684e33d25.0
-@material/radio@15.0.0-canary.684e33d25.0
-@material/ripple@15.0.0-canary.684e33d25.0
-@material/rtl@15.0.0-canary.684e33d25.0
-@material/segmented-button@15.0.0-canary.684e33d25.0
-@material/select@15.0.0-canary.684e33d25.0
-@material/shape@15.0.0-canary.684e33d25.0
-@material/slider@15.0.0-canary.684e33d25.0
-@material/snackbar@15.0.0-canary.684e33d25.0
-@material/switch@15.0.0-canary.684e33d25.0
-@material/tab-bar@15.0.0-canary.684e33d25.0
-@material/tab-indicator@15.0.0-canary.684e33d25.0
-@material/tab-scroller@15.0.0-canary.684e33d25.0
-@material/tab@15.0.0-canary.684e33d25.0
-@material/textfield@15.0.0-canary.684e33d25.0
-@material/theme@15.0.0-canary.684e33d25.0
-@material/tokens@15.0.0-canary.684e33d25.0
-@material/tooltip@15.0.0-canary.684e33d25.0
-@material/top-app-bar@15.0.0-canary.684e33d25.0
-@material/touch-target@15.0.0-canary.684e33d25.0
-@material/typography@15.0.0-canary.684e33d25.0
+@material/animation@15.0.0-canary.bc9ae6c9c.0
+@material/auto-init@15.0.0-canary.bc9ae6c9c.0
+@material/banner@15.0.0-canary.bc9ae6c9c.0
+@material/base@15.0.0-canary.bc9ae6c9c.0
+@material/button@15.0.0-canary.bc9ae6c9c.0
+@material/card@15.0.0-canary.bc9ae6c9c.0
+@material/checkbox@15.0.0-canary.bc9ae6c9c.0
+@material/chips@15.0.0-canary.bc9ae6c9c.0
+@material/circular-progress@15.0.0-canary.bc9ae6c9c.0
+@material/data-table@15.0.0-canary.bc9ae6c9c.0
+@material/density@15.0.0-canary.bc9ae6c9c.0
+@material/dialog@15.0.0-canary.bc9ae6c9c.0
+@material/dom@15.0.0-canary.bc9ae6c9c.0
+@material/drawer@15.0.0-canary.bc9ae6c9c.0
+@material/elevation@15.0.0-canary.bc9ae6c9c.0
+@material/fab@15.0.0-canary.bc9ae6c9c.0
+@material/feature-targeting@15.0.0-canary.bc9ae6c9c.0
+@material/floating-label@15.0.0-canary.bc9ae6c9c.0
+@material/focus-ring@15.0.0-canary.bc9ae6c9c.0
+@material/form-field@15.0.0-canary.bc9ae6c9c.0
+@material/icon-button@15.0.0-canary.bc9ae6c9c.0
+@material/image-list@15.0.0-canary.bc9ae6c9c.0
+@material/layout-grid@15.0.0-canary.bc9ae6c9c.0
+@material/line-ripple@15.0.0-canary.bc9ae6c9c.0
+@material/linear-progress@15.0.0-canary.bc9ae6c9c.0
+@material/list@15.0.0-canary.bc9ae6c9c.0
+@material/menu-surface@15.0.0-canary.bc9ae6c9c.0
+@material/menu@15.0.0-canary.bc9ae6c9c.0
+@material/notched-outline@15.0.0-canary.bc9ae6c9c.0
+@material/progress-indicator@15.0.0-canary.bc9ae6c9c.0
+@material/radio@15.0.0-canary.bc9ae6c9c.0
+@material/ripple@15.0.0-canary.bc9ae6c9c.0
+@material/rtl@15.0.0-canary.bc9ae6c9c.0
+@material/segmented-button@15.0.0-canary.bc9ae6c9c.0
+@material/select@15.0.0-canary.bc9ae6c9c.0
+@material/shape@15.0.0-canary.bc9ae6c9c.0
+@material/slider@15.0.0-canary.bc9ae6c9c.0
+@material/snackbar@15.0.0-canary.bc9ae6c9c.0
+@material/switch@15.0.0-canary.bc9ae6c9c.0
+@material/tab-bar@15.0.0-canary.bc9ae6c9c.0
+@material/tab-indicator@15.0.0-canary.bc9ae6c9c.0
+@material/tab-scroller@15.0.0-canary.bc9ae6c9c.0
+@material/tab@15.0.0-canary.bc9ae6c9c.0
+@material/textfield@15.0.0-canary.bc9ae6c9c.0
+@material/theme@15.0.0-canary.bc9ae6c9c.0
+@material/tokens@15.0.0-canary.bc9ae6c9c.0
+@material/tooltip@15.0.0-canary.bc9ae6c9c.0
+@material/top-app-bar@15.0.0-canary.bc9ae6c9c.0
+@material/touch-target@15.0.0-canary.bc9ae6c9c.0
+@material/typography@15.0.0-canary.bc9ae6c9c.0
 @mdx-js/react@2.3.0
 @ndelangen/get-tarball@3.0.9
-@ngtools/webpack@15.2.11
+@ngtools/webpack@16.2.16
 @nodelib/fs.scandir@2.1.5
 @nodelib/fs.stat@2.0.5
 @nodelib/fs.walk@1.2.8
@@ -390,14 +404,23 @@
 @rollup/plugin-node-resolve@15.3.1
 @rollup/pluginutils/> picomatch@4.0.5
 @rollup/pluginutils@5.4.0
-@schematics/angular@15.2.11
+@schematics/angular@16.2.16
 @sigstore/bundle@1.1.0
 @sigstore/protobuf-specs@0.2.1
+@sigstore/sign/> @tootallnate/once@2.0.1
+@sigstore/sign/> cacache/> minipass@7.1.3
+@sigstore/sign/> cacache@17.1.4
+@sigstore/sign/> fs-minipass/> minipass@7.1.3
+@sigstore/sign/> fs-minipass@3.0.3
+@sigstore/sign/> http-proxy-agent@5.0.0
 @sigstore/sign/> lru-cache@7.18.3
 @sigstore/sign/> make-fetch-happen@11.1.1
+@sigstore/sign/> minipass-collect/> minipass@3.3.6
+@sigstore/sign/> minipass-collect@1.0.2
 @sigstore/sign/> minipass-fetch/> minipass@7.1.3
 @sigstore/sign/> minipass-fetch@3.0.5
 @sigstore/sign/> minipass@5.0.0
+@sigstore/sign/> yallist@4.0.0
 @sigstore/sign@1.0.0
 @sigstore/tuf@1.0.3
 @sinclair/typebox@0.27.12
@@ -426,8 +449,6 @@
 @storybook/angular/> p-locate@5.0.0
 @storybook/angular@7.6.24
 @storybook/blocks@7.6.24
-@storybook/builder-manager/> @esbuild/linux-loong64@0.18.20
-@storybook/builder-manager/> esbuild@0.18.20
 @storybook/builder-manager/> fs-extra@11.4.0
 @storybook/builder-manager/> jsonfile@6.2.1
 @storybook/builder-manager/> universalify@2.0.1
@@ -436,11 +457,9 @@
 @storybook/builder-webpack5/> @babel/core@7.29.7
 @storybook/builder-webpack5/> @babel/generator@7.29.7
 @storybook/builder-webpack5/> @babel/template@7.29.7
-@storybook/builder-webpack5/> @jridgewell/gen-mapping@0.3.13
 @storybook/builder-webpack5/> @types/node@18.19.130
 @storybook/builder-webpack5/> babel-loader@9.2.1
 @storybook/builder-webpack5/> convert-source-map@2.0.0
-@storybook/builder-webpack5/> es-module-lexer@1.7.0
 @storybook/builder-webpack5/> find-cache-dir@4.0.0
 @storybook/builder-webpack5/> find-up@6.3.0
 @storybook/builder-webpack5/> fs-extra@11.4.0
@@ -460,67 +479,47 @@
 @storybook/cli/> @babel/core/> semver@6.3.1
 @storybook/cli/> @babel/core@7.29.7
 @storybook/cli/> @babel/generator@7.29.7
-@storybook/cli/> @babel/helper-define-polyfill-provider@0.6.8
-@storybook/cli/> @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
 @storybook/cli/> @babel/plugin-transform-async-to-generator@7.29.7
 @storybook/cli/> @babel/preset-env/> semver@6.3.1
 @storybook/cli/> @babel/preset-env@7.29.7
 @storybook/cli/> @babel/preset-modules@0.1.6-no-external-plugins
 @storybook/cli/> @babel/template@7.29.7
-@storybook/cli/> @jridgewell/gen-mapping@0.3.13
-@storybook/cli/> babel-plugin-polyfill-corejs2/> semver@6.3.1
-@storybook/cli/> babel-plugin-polyfill-corejs2@0.4.17
 @storybook/cli/> babel-plugin-polyfill-corejs3@0.14.2
 @storybook/cli/> babel-plugin-polyfill-regenerator@0.6.8
 @storybook/cli/> commander@6.2.1
 @storybook/cli/> convert-source-map@2.0.0
-@storybook/cli/> debug@4.4.3
 @storybook/cli/> find-up@5.0.0
 @storybook/cli/> fs-extra@11.4.0
 @storybook/cli/> globby@11.1.0
 @storybook/cli/> jsesc@3.1.0
 @storybook/cli/> jsonfile@6.2.1
 @storybook/cli/> locate-path@6.0.0
-@storybook/cli/> ms@2.1.3
 @storybook/cli/> p-limit@3.1.0
 @storybook/cli/> p-locate@5.0.0
-@storybook/cli/> resolve@1.22.12
 @storybook/cli/> slash@3.0.0
 @storybook/cli/> universalify@2.0.1
 @storybook/cli@7.6.24
 @storybook/client-logger@7.6.24
 @storybook/codemod/> @babel/core@7.29.7
 @storybook/codemod/> @babel/generator@7.29.7
-@storybook/codemod/> @babel/helper-define-polyfill-provider@0.6.8
-@storybook/codemod/> @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
 @storybook/codemod/> @babel/plugin-transform-async-to-generator@7.29.7
 @storybook/codemod/> @babel/preset-env@7.29.7
 @storybook/codemod/> @babel/preset-modules@0.1.6-no-external-plugins
 @storybook/codemod/> @babel/template@7.29.7
-@storybook/codemod/> @jridgewell/gen-mapping@0.3.13
-@storybook/codemod/> babel-plugin-polyfill-corejs2@0.4.17
 @storybook/codemod/> babel-plugin-polyfill-corejs3@0.14.2
 @storybook/codemod/> babel-plugin-polyfill-regenerator@0.6.8
 @storybook/codemod/> convert-source-map@2.0.0
-@storybook/codemod/> debug@4.4.3
 @storybook/codemod/> globby@11.1.0
 @storybook/codemod/> jsesc@3.1.0
-@storybook/codemod/> ms@2.1.3
-@storybook/codemod/> resolve@1.22.12
 @storybook/codemod/> semver@6.3.1
 @storybook/codemod/> slash@3.0.0
 @storybook/codemod@7.6.24
 @storybook/components@7.6.24
-@storybook/core-common/> @esbuild/linux-loong64@0.18.20
 @storybook/core-common/> @types/node@18.19.130
-@storybook/core-common/> esbuild@0.18.20
 @storybook/core-common/> find-up@5.0.0
 @storybook/core-common/> fs-extra@11.4.0
-@storybook/core-common/> glob@10.5.0
 @storybook/core-common/> jsonfile@6.2.1
 @storybook/core-common/> locate-path@6.0.0
-@storybook/core-common/> minimatch@9.0.9
-@storybook/core-common/> minipass@7.1.3
 @storybook/core-common/> p-limit@3.1.0
 @storybook/core-common/> p-locate@5.0.0
 @storybook/core-common/> pkg-dir@5.0.0
@@ -538,7 +537,6 @@
 @storybook/core-webpack@7.6.24
 @storybook/csf-plugin@7.6.24
 @storybook/csf-tools/> @babel/generator@7.29.7
-@storybook/csf-tools/> @jridgewell/gen-mapping@0.3.13
 @storybook/csf-tools/> fs-extra@11.4.0
 @storybook/csf-tools/> jsesc@3.1.0
 @storybook/csf-tools/> jsonfile@6.2.1
@@ -585,7 +583,7 @@
 @testing-library/jest-dom/> dom-accessibility-api@0.6.3
 @testing-library/jest-dom@6.9.1
 @testing-library/user-event@14.3.0
-@tootallnate/once@2.0.1
+@tootallnate/once@1.1.2
 @tufjs/canonical-json@1.0.0
 @tufjs/models/> minimatch@9.0.9
 @tufjs/models@1.0.4
@@ -605,8 +603,6 @@
 @types/doctrine@0.0.3
 @types/ejs@3.1.5
 @types/emscripten@1.41.5
-@types/eslint-scope@3.7.7
-@types/eslint@9.6.1
 @types/estree@1.0.9
 @types/express-serve-static-core@5.1.2
 @types/express/> @types/express-serve-static-core@4.19.9
@@ -650,27 +646,29 @@
 @types/ws@8.18.1
 @types/yargs-parser@21.0.3
 @types/yargs@17.0.35
+@vitejs/plugin-basic-ssl@1.0.1
 @vitest/expect@0.34.7
 @vitest/spy@0.34.7
 @vitest/utils/> ansi-styles@5.2.0
 @vitest/utils/> pretty-format@29.7.0
 @vitest/utils/> react-is@18.3.1
 @vitest/utils@0.34.7
-@webassemblyjs/ast@1.11.1
-@webassemblyjs/floating-point-hex-parser@1.11.1
-@webassemblyjs/helper-api-error@1.11.1
-@webassemblyjs/helper-buffer@1.11.1
-@webassemblyjs/helper-numbers@1.11.1
-@webassemblyjs/helper-wasm-bytecode@1.11.1
-@webassemblyjs/helper-wasm-section@1.11.1
-@webassemblyjs/ieee754@1.11.1
-@webassemblyjs/leb128@1.11.1
-@webassemblyjs/utf8@1.11.1
-@webassemblyjs/wasm-edit@1.11.1
-@webassemblyjs/wasm-gen@1.11.1
-@webassemblyjs/wasm-opt@1.11.1
-@webassemblyjs/wasm-parser@1.11.1
-@webassemblyjs/wast-printer@1.11.1
+@webassemblyjs/ast@1.14.1
+@webassemblyjs/floating-point-hex-parser@1.13.2
+@webassemblyjs/helper-api-error@1.13.2
+@webassemblyjs/helper-buffer@1.14.1
+@webassemblyjs/helper-numbers@1.13.2
+@webassemblyjs/helper-wasm-bytecode@1.13.2
+@webassemblyjs/helper-wasm-section@1.14.1
+@webassemblyjs/ieee754@1.13.2
+@webassemblyjs/leb128@1.13.2
+@webassemblyjs/utf8@1.13.2
+@webassemblyjs/wasm-edit@1.14.1
+@webassemblyjs/wasm-gen@1.14.1
+@webassemblyjs/wasm-opt@1.14.1
+@webassemblyjs/wasm-parser@1.14.1
+@webassemblyjs/wast-printer@1.14.1
+@wessberg/ts-evaluator@0.0.27
 @xtuc/ieee754@1.2.0
 @xtuc/long@4.2.2
 @yarnpkg/esbuild-plugin-pnp@3.0.0-rc.15
@@ -683,7 +681,10 @@ abab@2.0.6
 abbrev@1.1.1
 accepts/> negotiator@0.6.3
 accepts@1.3.8
-acorn-import-assertions@1.9.0
+acorn-globals/> acorn@7.4.1
+acorn-globals@6.0.0
+acorn-import-attributes@1.9.5
+acorn-walk@7.2.0
 acorn@8.17.0
 address@1.2.2
 adjust-sourcemap-loader/> loader-utils@2.0.4
@@ -717,16 +718,26 @@ ast-types@0.16.1
 async-limiter@1.0.1
 async@3.2.6
 asynckit@0.4.0
-autoprefixer@10.4.13
+autoprefixer@10.4.14
 available-typed-arrays@1.0.7
 axe-core@4.10.2
 babel-core@7.0.0-bridge.0
-babel-loader@9.1.2
+babel-loader/> find-cache-dir@4.0.0
+babel-loader/> find-up@6.3.0
+babel-loader/> locate-path@7.2.0
+babel-loader/> p-limit@4.0.0
+babel-loader/> p-locate@6.0.0
+babel-loader/> path-exists@5.0.0
+babel-loader/> pkg-dir@7.0.0
+babel-loader/> yocto-queue@1.2.2
+babel-loader@9.1.3
 babel-plugin-istanbul@6.1.1
 babel-plugin-polyfill-corejs2/> semver@6.3.1
-babel-plugin-polyfill-corejs2@0.3.3
-babel-plugin-polyfill-corejs3@0.6.0
-babel-plugin-polyfill-regenerator@0.4.1
+babel-plugin-polyfill-corejs2@0.4.17
+babel-plugin-polyfill-corejs3/> @babel/helper-define-polyfill-provider@0.4.4
+babel-plugin-polyfill-corejs3@0.8.7
+babel-plugin-polyfill-regenerator/> @babel/helper-define-polyfill-provider@0.5.0
+babel-plugin-polyfill-regenerator@0.5.5
 balanced-match@1.0.2
 base64-js@1.5.1
 base64id@2.0.0
@@ -746,6 +757,7 @@ bplist-parser@0.2.0
 brace-expansion@2.1.2
 braces@3.0.3
 browser-assert@1.2.1
+browser-process-hrtime@1.0.0
 browserify-zlib/> pako@0.2.9
 browserify-zlib@0.1.4
 browserslist@4.28.7
@@ -754,11 +766,10 @@ buffer-crc32@0.2.13
 buffer-from@1.1.2
 buffer@5.7.1
 bytes@3.1.2
-cacache/> fs-minipass/> minipass@7.1.3
 cacache/> fs-minipass@3.0.3
-cacache/> lru-cache@7.18.3
-cacache/> minipass@4.2.8
-cacache@17.0.4
+cacache/> lru-cache@10.4.3
+cacache/> minipass@7.1.3
+cacache@18.0.4
 call-bind-apply-helpers@1.0.2
 call-bind@1.0.9
 call-bound@1.0.4
@@ -792,7 +803,7 @@ color-name@1.1.4
 color-support@1.1.3
 colorette@2.0.20
 combined-stream@1.0.8
-commander@10.0.1
+commander@11.1.0
 common-path-prefix@3.0.0
 commondir@1.0.1
 compressible@2.0.18
@@ -824,21 +835,35 @@ core-js-compat@3.49.0
 core-util-is@1.0.3
 cors@2.8.6
 cosmiconfig@7.1.0
-critters/> parse5@6.0.1
-critters@0.0.16
+critters/> css-select@5.2.2
+critters/> dom-serializer@2.0.0
+critters/> domhandler@5.0.3
+critters/> domutils@3.2.2
+critters/> entities@4.5.0
+critters/> htmlparser2@8.0.2
+critters@0.0.20
 cross-spawn/> which@2.0.2
 cross-spawn@7.0.6
 crypto-random-string@2.0.0
-css-loader@6.7.3
+css-loader@6.8.1
 css-select@4.3.0
 css-what@6.2.2
 css.escape@1.5.1
 cssesc@3.0.0
+cssom@0.4.4
+cssstyle/> cssom@0.3.8
+cssstyle@2.3.0
 csstype@3.2.3
 cuint@0.2.2
 custom-event@1.0.1
+data-urls/> punycode@2.3.1
+data-urls/> tr46@2.1.0
+data-urls/> webidl-conversions@6.1.0
+data-urls/> whatwg-url@8.7.0
+data-urls@2.0.0
 date-format@4.0.14
-debug@4.3.4
+debug@4.4.3
+decimal.js@10.6.0
 deep-eql@4.1.4
 deep-equal/> isarray@2.0.5
 deep-equal@2.2.3
@@ -874,6 +899,8 @@ dom-converter@0.2.0
 dom-serialize@2.2.1
 dom-serializer@1.4.1
 domelementtype@2.3.0
+domexception/> webidl-conversions@5.0.0
+domexception@2.0.1
 domhandler@4.3.1
 domutils@2.8.0
 dot-case@3.0.4
@@ -895,8 +922,6 @@ encoding/> iconv-lite@0.6.3
 encoding@0.1.13
 end-of-stream@1.4.5
 engine.io-parser@5.2.3
-engine.io/> debug@4.4.3
-engine.io/> ms@2.1.3
 engine.io@6.6.9
 enhanced-resolve@5.24.3
 ent@2.2.2
@@ -910,37 +935,19 @@ es-define-property@1.0.1
 es-errors@1.3.0
 es-get-iterator/> isarray@2.0.5
 es-get-iterator@1.1.3
-es-module-lexer@0.9.3
+es-module-lexer@1.7.0
 es-object-atoms@1.1.2
 es-set-tostringtag@2.1.0
 esbuild-plugin-alias@0.2.1
 esbuild-register@3.6.0
-esbuild-wasm@0.17.8
-esbuild/> @esbuild/android-arm64@0.17.8
-esbuild/> @esbuild/android-arm@0.17.8
-esbuild/> @esbuild/android-x64@0.17.8
-esbuild/> @esbuild/darwin-arm64@0.17.8
-esbuild/> @esbuild/darwin-x64@0.17.8
-esbuild/> @esbuild/freebsd-arm64@0.17.8
-esbuild/> @esbuild/freebsd-x64@0.17.8
-esbuild/> @esbuild/linux-arm64@0.17.8
-esbuild/> @esbuild/linux-arm@0.17.8
-esbuild/> @esbuild/linux-ia32@0.17.8
-esbuild/> @esbuild/linux-mips64el@0.17.8
-esbuild/> @esbuild/linux-ppc64@0.17.8
-esbuild/> @esbuild/linux-riscv64@0.17.8
-esbuild/> @esbuild/linux-s390x@0.17.8
-esbuild/> @esbuild/linux-x64@0.17.8
-esbuild/> @esbuild/netbsd-x64@0.17.8
-esbuild/> @esbuild/openbsd-x64@0.17.8
-esbuild/> @esbuild/sunos-x64@0.17.8
-esbuild/> @esbuild/win32-arm64@0.17.8
-esbuild/> @esbuild/win32-ia32@0.17.8
-esbuild/> @esbuild/win32-x64@0.17.8
-esbuild@0.17.8
+esbuild-wasm@0.18.17
+esbuild@0.18.20
 escalade@3.2.0
 escape-html@1.0.3
 escape-string-regexp@1.0.5
+escodegen/> estraverse@5.3.0
+escodegen/> source-map@0.6.1
+escodegen@2.1.0
 eslint-scope@5.1.1
 esprima@4.0.1
 esrecurse/> estraverse@5.3.0
@@ -1031,10 +1038,13 @@ giget@1.2.5
 github-slugger@1.5.0
 glob-parent@5.1.2
 glob-to-regexp@0.4.1
-glob@8.1.0
+glob/> minimatch@9.0.9
+glob/> minipass@7.1.3
+glob@10.5.0
 globby@13.2.2
 gopd@1.2.0
 graceful-fs@4.2.11
+guess-parser@0.4.22
 gunzip-maybe@1.4.2
 handle-thing@2.0.1
 handlebars/> source-map@0.6.1
@@ -1055,6 +1065,7 @@ hpack.js/> readable-stream@2.3.8
 hpack.js/> safe-buffer@5.1.2
 hpack.js/> string_decoder@1.1.1
 hpack.js@2.1.6
+html-encoding-sniffer@2.0.1
 html-entities@2.6.0
 html-escaper@2.0.2
 html-minifier-terser/> commander@8.3.0
@@ -1066,7 +1077,7 @@ http-deceiver@1.2.7
 http-errors/> statuses@2.0.2
 http-errors@2.0.1
 http-parser-js@0.5.10
-http-proxy-agent@5.0.0
+http-proxy-agent@4.0.1
 http-proxy-middleware@2.0.10
 http-proxy@1.18.1
 https-proxy-agent@5.0.1
@@ -1087,7 +1098,7 @@ indent-string@4.0.0
 infer-owner@1.0.4
 inflight@1.0.6
 inherits@2.0.4
-ini@3.0.1
+ini@4.1.1
 injection-js@2.6.1
 inquirer@8.2.4
 internal-slot@1.1.0
@@ -1121,6 +1132,7 @@ is-path-cwd@2.2.0
 is-path-inside@3.0.3
 is-plain-obj@3.0.0
 is-plain-object@2.0.4
+is-potential-custom-element-name@1.0.1
 is-regex@1.2.1
 is-set@2.0.3
 is-shared-array-buffer@1.0.4
@@ -1158,17 +1170,25 @@ jest-regex-util@29.6.3
 jest-util@29.7.0
 jest-worker/> supports-color@8.1.1
 jest-worker@27.5.1
+jiti@1.21.7
 js-tokens@4.0.0
 js-yaml@3.15.0
 jscodeshift/> @babel/core@7.29.7
 jscodeshift/> @babel/generator@7.29.7
 jscodeshift/> @babel/template@7.29.7
-jscodeshift/> @jridgewell/gen-mapping@0.3.13
 jscodeshift/> convert-source-map@2.0.0
 jscodeshift/> jsesc@3.1.0
 jscodeshift/> semver@6.3.1
 jscodeshift/> write-file-atomic@2.4.3
 jscodeshift@0.15.2
+jsdom/> form-data@3.0.5
+jsdom/> parse5@6.0.1
+jsdom/> punycode@2.3.1
+jsdom/> tr46@2.1.0
+jsdom/> webidl-conversions@6.1.0
+jsdom/> whatwg-url@8.7.0
+jsdom/> ws@7.5.13
+jsdom@16.7.0
 jsesc@2.5.2
 json-parse-even-better-errors@2.3.1
 json-schema-traverse@1.0.0
@@ -1195,6 +1215,7 @@ karma@6.4.4
 kind-of@6.0.3
 kleur@3.0.3
 klona@2.0.6
+launch-editor@2.14.1
 lazy-universal-dotenv@4.0.0
 less-loader@11.1.0
 less/> make-dir@2.1.0
@@ -1217,12 +1238,16 @@ loupe@2.3.7
 lower-case@2.0.2
 lru-cache@5.1.1
 lz-string@1.5.0
-magic-string@0.29.0
+magic-string@0.30.1
 make-dir/> semver@6.3.1
 make-dir@3.1.0
 make-fetch-happen/> @npmcli/fs@2.1.2
+make-fetch-happen/> @tootallnate/once@2.0.1
 make-fetch-happen/> cacache@16.1.3
+make-fetch-happen/> glob@8.1.0
+make-fetch-happen/> http-proxy-agent@5.0.0
 make-fetch-happen/> lru-cache@7.18.3
+make-fetch-happen/> minipass-collect@1.0.2
 make-fetch-happen/> ssri@9.0.1
 make-fetch-happen/> unique-filename@2.0.1
 make-fetch-happen/> unique-slug@3.0.0
@@ -1246,11 +1271,12 @@ mime-types@2.1.35
 mime@2.6.0
 mimic-fn@2.1.0
 min-indent@1.0.1
-mini-css-extract-plugin@2.7.2
+mini-css-extract-plugin@2.7.6
 minimalistic-assert@1.0.1
 minimatch@5.1.0
 minimist@1.2.8
-minipass-collect@1.0.2
+minipass-collect/> minipass@7.1.3
+minipass-collect@2.0.1
 minipass-fetch@2.1.2
 minipass-flush@1.0.7
 minipass-json-stream@1.0.2
@@ -1263,7 +1289,8 @@ minizlib@2.1.2
 mkdirp-classic@0.5.3
 mkdirp@1.0.4
 mlly@1.8.2
-ms@2.1.2
+mrmime@1.0.1
+ms@2.1.3
 multicast-dns@7.2.5
 mute-stream@0.0.8
 nanoid@3.3.16
@@ -1271,9 +1298,33 @@ needle/> iconv-lite@0.6.3
 needle@3.5.0
 negotiator@0.6.4
 neo-async@2.6.2
+ng-packagr/> @esbuild/android-arm64@0.19.12
+ng-packagr/> @esbuild/android-arm@0.19.12
+ng-packagr/> @esbuild/android-x64@0.19.12
+ng-packagr/> @esbuild/darwin-arm64@0.19.12
+ng-packagr/> @esbuild/darwin-x64@0.19.12
+ng-packagr/> @esbuild/freebsd-arm64@0.19.12
+ng-packagr/> @esbuild/freebsd-x64@0.19.12
+ng-packagr/> @esbuild/linux-arm64@0.19.12
+ng-packagr/> @esbuild/linux-arm@0.19.12
+ng-packagr/> @esbuild/linux-ia32@0.19.12
+ng-packagr/> @esbuild/linux-loong64@0.19.12
+ng-packagr/> @esbuild/linux-mips64el@0.19.12
+ng-packagr/> @esbuild/linux-ppc64@0.19.12
+ng-packagr/> @esbuild/linux-riscv64@0.19.12
+ng-packagr/> @esbuild/linux-s390x@0.19.12
+ng-packagr/> @esbuild/linux-x64@0.19.12
+ng-packagr/> @esbuild/netbsd-x64@0.19.12
+ng-packagr/> @esbuild/openbsd-x64@0.19.12
+ng-packagr/> @esbuild/sunos-x64@0.19.12
+ng-packagr/> @esbuild/win32-arm64@0.19.12
+ng-packagr/> @esbuild/win32-ia32@0.19.12
+ng-packagr/> @esbuild/win32-x64@0.19.12
 ng-packagr/> ajv@8.20.0
 ng-packagr/> convert-source-map@2.0.0
-ng-packagr@15.2.2
+ng-packagr/> esbuild-wasm@0.19.12
+ng-packagr/> esbuild@0.19.12
+ng-packagr@16.2.3
 nice-napi@1.0.2
 no-case@3.0.4
 node-abort-controller@3.1.1
@@ -1302,27 +1353,38 @@ npm-normalize-package-bin@3.0.1
 npm-package-arg@10.1.0
 npm-packlist@7.0.4
 npm-pick-manifest@8.0.1
+npm-registry-fetch/> @tootallnate/once@2.0.1
+npm-registry-fetch/> cacache/> minipass@7.1.3
+npm-registry-fetch/> cacache@17.1.4
+npm-registry-fetch/> fs-minipass/> minipass@7.1.3
+npm-registry-fetch/> fs-minipass@3.0.3
+npm-registry-fetch/> http-proxy-agent@5.0.0
 npm-registry-fetch/> lru-cache@7.18.3
 npm-registry-fetch/> make-fetch-happen@11.1.1
+npm-registry-fetch/> minipass-collect/> minipass@3.3.6
+npm-registry-fetch/> minipass-collect@1.0.2
 npm-registry-fetch/> minipass-fetch/> minipass@7.1.3
 npm-registry-fetch/> minipass-fetch@3.0.5
 npm-registry-fetch/> minipass@5.0.0
+npm-registry-fetch/> yallist@4.0.0
 npm-registry-fetch@14.0.5
 npm-run-path@4.0.1
 npmlog@6.0.2
 nth-check@2.1.1
+nwsapi@2.2.24
 nypm@0.5.4
 object-assign@4.1.1
 object-inspect@1.13.4
 object-is@1.1.6
 object-keys@1.1.1
+object-path@0.11.8
 object.assign@4.1.7
 obuf@1.1.2
 on-finished@2.4.1
 on-headers@1.1.0
 once@1.4.0
 onetime@5.1.2
-open@8.4.1
+open@8.4.2
 ora@5.4.1
 os-tmpdir@1.0.2
 p-limit@2.3.0
@@ -1332,10 +1394,16 @@ p-retry/> retry@0.13.1
 p-retry@4.6.2
 p-try@2.2.0
 package-json-from-dist@1.0.1
+pacote/> cacache/> minipass@7.1.3
+pacote/> cacache@17.1.4
 pacote/> fs-minipass/> minipass@7.1.3
 pacote/> fs-minipass@3.0.3
-pacote/> minipass@4.2.8
-pacote@15.1.0
+pacote/> lru-cache@7.18.3
+pacote/> minipass-collect/> minipass@3.3.6
+pacote/> minipass-collect@1.0.2
+pacote/> minipass@5.0.0
+pacote/> yallist@4.0.0
+pacote@15.2.0
 pako@1.0.11
 param-case@3.0.4
 parent-module@1.0.1
@@ -1343,8 +1411,6 @@ parse-json@5.2.0
 parse-node-version@1.0.1
 parse5-html-rewriting-stream/> entities@4.5.0
 parse5-html-rewriting-stream@7.0.0
-parse5-htmlparser2-tree-adapter/> parse5@6.0.1
-parse5-htmlparser2-tree-adapter@6.0.1
 parse5-sax-parser@7.0.0
 parse5/> entities@6.0.1
 parse5@7.3.0
@@ -1368,7 +1434,7 @@ picocolors@1.1.1
 picomatch@2.3.2
 pify@4.0.1
 pirates@4.0.7
-piscina@3.2.0
+piscina@4.0.0
 pixelmatch/> pngjs@6.0.0
 pixelmatch@5.3.0
 pkg-dir@4.2.0
@@ -1379,7 +1445,10 @@ playwright@1.49.1
 pngjs@7.0.0
 polished@4.3.1
 possible-typed-array-names@1.1.0
-postcss-loader@7.0.2
+postcss-loader/> argparse@2.0.1
+postcss-loader/> cosmiconfig@8.3.6
+postcss-loader/> js-yaml@4.3.0
+postcss-loader@7.3.3
 postcss-modules-extract-imports@3.1.0
 postcss-modules-local-by-default@4.2.0
 postcss-modules-scope@3.2.1
@@ -1408,6 +1477,8 @@ proxy-addr/> ipaddr.js@1.9.1
 proxy-addr@2.0.7
 proxy-from-env@1.1.0
 prr@1.0.1
+psl/> punycode@2.3.1
+psl@1.15.0
 pump@3.0.4
 pumpify/> pump@2.0.1
 pumpify@1.5.1
@@ -1422,6 +1493,7 @@ puppeteer-core/> ws@6.2.6
 puppeteer-core@2.1.1
 qjobs@1.2.0
 qs@6.15.3
+querystringify@2.2.0
 queue-microtask@1.2.3
 ramda@0.29.0
 randombytes@2.1.0
@@ -1436,10 +1508,7 @@ react-style-singleton@2.2.3
 react@18.3.1
 read-package-json-fast/> json-parse-even-better-errors@3.0.2
 read-package-json-fast@3.0.2
-read-package-json/> glob@10.5.0
 read-package-json/> json-parse-even-better-errors@3.0.2
-read-package-json/> minimatch@9.0.9
-read-package-json/> minipass@7.1.3
 read-package-json@6.0.4
 read-pkg-up/> type-fest@0.8.1
 read-pkg-up@7.0.1
@@ -1474,7 +1543,7 @@ resolve-from@5.0.0
 resolve-url-loader/> loader-utils@2.0.4
 resolve-url-loader/> source-map@0.6.1
 resolve-url-loader@5.0.0
-resolve@1.22.1
+resolve@1.22.2
 restore-cursor@3.1.0
 retry@0.12.0
 reusify@1.1.0
@@ -1491,9 +1560,10 @@ safe-buffer@5.2.1
 safe-regex-test@1.1.0
 safer-buffer@2.1.2
 safevalues@0.3.4
-sass-loader@13.2.0
-sass@1.58.1
+sass-loader@13.3.2
+sass@1.64.1
 sax@1.6.1
+saxes@5.0.1
 scheduler@0.23.2
 schema-utils/> ajv-keywords@5.1.0
 schema-utils/> ajv@8.20.0
@@ -1507,7 +1577,6 @@ send/> debug/> ms@2.0.0
 send/> debug@2.6.9
 send/> encodeurl@2.0.0
 send/> mime@1.6.0
-send/> ms@2.1.3
 send/> range-parser@1.2.1
 send/> statuses@2.0.2
 send@0.19.2
@@ -1526,28 +1595,32 @@ setprototypeof@1.2.0
 shallow-clone@3.0.1
 shebang-command@2.0.0
 shebang-regex@3.0.0
+shell-quote@1.10.0
 side-channel-list@1.0.1
 side-channel-map@1.0.1
 side-channel-weakmap@1.0.2
 side-channel@1.1.1
 signal-exit@3.0.7
+sigstore/> @tootallnate/once@2.0.1
+sigstore/> cacache/> minipass@7.1.3
+sigstore/> cacache@17.1.4
+sigstore/> fs-minipass/> minipass@7.1.3
+sigstore/> fs-minipass@3.0.3
+sigstore/> http-proxy-agent@5.0.0
 sigstore/> lru-cache@7.18.3
 sigstore/> make-fetch-happen@11.1.1
+sigstore/> minipass-collect/> minipass@3.3.6
+sigstore/> minipass-collect@1.0.2
 sigstore/> minipass-fetch/> minipass@7.1.3
 sigstore/> minipass-fetch@3.0.5
 sigstore/> minipass@5.0.0
+sigstore/> yallist@4.0.0
 sigstore@1.9.0
 sisteransi@1.0.5
 slash@4.0.0
 smart-buffer@4.2.0
-socket.io-adapter/> debug@4.4.3
-socket.io-adapter/> ms@2.1.3
 socket.io-adapter@2.5.8
-socket.io-parser/> debug@4.4.3
-socket.io-parser/> ms@2.1.3
 socket.io-parser@4.2.7
-socket.io/> debug@4.4.3
-socket.io/> ms@2.1.3
 socket.io@4.8.3
 sockjs@0.3.24
 socks-proxy-agent@7.0.0
@@ -1588,6 +1661,7 @@ supports-color@7.2.0
 supports-preserve-symlinks-flag@1.0.0
 swc-loader@0.2.7
 symbol-observable@4.0.0
+symbol-tree@3.2.4
 synchronous-promise@2.0.18
 tapable@2.3.3
 tar-fs/> chownr@1.1.4
@@ -1609,7 +1683,7 @@ terser-webpack-plugin/> commander@2.20.3
 terser-webpack-plugin/> terser@5.49.0
 terser-webpack-plugin@5.6.1
 terser/> commander@2.20.3
-terser@5.16.3
+terser@5.19.2
 test-exclude/> brace-expansion@1.1.16
 test-exclude/> glob@7.2.3
 test-exclude/> minimatch@3.1.5
@@ -1629,17 +1703,29 @@ tmpl@1.0.5
 to-regex-range@5.0.1
 tocbot@4.36.8
 toidentifier@1.0.1
+tough-cookie/> punycode@2.3.1
+tough-cookie/> universalify@0.2.0
+tough-cookie@4.1.4
 tr46@0.0.3
 tree-kill@1.2.2
 ts-dedent@2.3.0
 tsconfig-paths-webpack-plugin@4.2.0
 tsconfig-paths@4.2.0
 tslib@2.8.1
+tuf-js/> @tootallnate/once@2.0.1
+tuf-js/> cacache/> minipass@7.1.3
+tuf-js/> cacache@17.1.4
+tuf-js/> fs-minipass/> minipass@7.1.3
+tuf-js/> fs-minipass@3.0.3
+tuf-js/> http-proxy-agent@5.0.0
 tuf-js/> lru-cache@7.18.3
 tuf-js/> make-fetch-happen@11.1.1
+tuf-js/> minipass-collect/> minipass@3.3.6
+tuf-js/> minipass-collect@1.0.2
 tuf-js/> minipass-fetch/> minipass@7.1.3
 tuf-js/> minipass-fetch@3.0.5
 tuf-js/> minipass@5.0.0
+tuf-js/> yallist@4.0.0
 tuf-js@1.1.7
 type-detect@4.1.0
 type-fest@0.21.3
@@ -1669,6 +1755,7 @@ untildify@4.0.0
 update-browserslist-db@1.2.3
 uri-js/> punycode@2.3.1
 uri-js@4.4.1
+url-parse@1.5.10
 url@0.11.4
 use-callback-ref@1.3.3
 use-resize-observer@9.1.0
@@ -1681,7 +1768,10 @@ uuid@8.3.2
 validate-npm-package-license@3.0.4
 validate-npm-package-name@5.0.1
 vary@1.1.2
+vite@4.5.5
 void-elements@2.0.1
+w3c-hr-time@1.0.2
+w3c-xmlserializer@2.0.0
 walker@1.0.8
 watchpack@2.5.2
 wbuf@1.7.3
@@ -1689,17 +1779,18 @@ wcwidth@1.0.1
 webidl-conversions@3.0.1
 webpack-dev-middleware@6.1.2
 webpack-dev-server/> webpack-dev-middleware@5.3.4
-webpack-dev-server@4.11.1
+webpack-dev-server@4.15.1
 webpack-hot-middleware@2.26.1
-webpack-merge@5.8.0
+webpack-merge@5.9.0
 webpack-sources@3.5.1
 webpack-subresource-integrity@5.1.0
 webpack-virtual-modules@0.5.0
-webpack/> @types/estree@0.0.51
 webpack/> schema-utils@3.3.0
-webpack@5.76.1
+webpack@5.94.0
 websocket-driver@0.7.5
 websocket-extensions@0.1.4
+whatwg-encoding@1.0.5
+whatwg-mimetype@2.3.0
 whatwg-url@5.0.0
 which-boxed-primitive@1.1.1
 which-collection@1.0.2
@@ -1713,6 +1804,8 @@ wrap-ansi@7.0.0
 wrappy@1.0.2
 write-file-atomic@4.0.2
 ws@8.21.1
+xml-name-validator@3.0.0
+xmlchars@2.2.0
 xtend@4.0.2
 xxhashjs@0.2.2
 y18n@5.0.8
@@ -1720,7 +1813,7 @@ yallist@3.1.1
 yaml@1.10.3
 yargs-parser@21.1.1
 yargs/> cliui@8.0.1
-yargs@17.6.2
+yargs@17.7.2
 yauzl@2.10.0
 yocto-queue@0.1.0
-zone.js@0.11.8
+zone.js@0.13.3
