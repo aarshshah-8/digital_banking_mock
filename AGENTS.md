@@ -92,6 +92,24 @@ followed by one PR per consuming app.
 A phase is finished when every box on its tracking issue is checked. Nothing from the next phase
 branches until then.
 
+### What phase 1 turned up
+
+- **`ng update` refuses to run on a dirty tree**, and an evidence capture is an untracked directory
+  under `.storybook-evidence/<label>/`. Move captures out of the repo (or delete them) before the
+  next version step; only baselines belong in git.
+- **Angular 16 changed how inputs are encoded in the emitted `.d.ts`** — `"title": "title"` became
+  `"title": { "alias": "title"; "required": false; }`, so that required inputs can be expressed.
+  `tools/api-surface.mjs` reads both shapes as of the 15 → 16 PR; before that fix every component in
+  the report showed a spurious input change on that step. Expect more of this: the API report is
+  generated from a compiler-internal encoding, and that encoding moves between majors.
+- **v15's stricter template checking did not break `advisor-console`'s spec.** It still logs
+  `NG0304: 'bds-card' is not a known element` and still reports SUCCESS, at v15 and v16 — the spec
+  asserts almost nothing because its TestBed never imports `BofaDesignSystemModule` (#16; not fixed
+  here, per **D4**). Treat it as a hole in coverage, not a passing test.
+- **The dashboard breakpoint is the only phase-1 thing worth driving a browser for**, and it is
+  cheap: 12 numbers (`flex-direction` plus each card's top/left/width at viewport 1268/960/959/600).
+  All 12 held identical across v14 → v15 → v16.
+
 ## Verifying a change
 
 Three gates, each answering a different question. All three run in CI on every PR.
@@ -107,6 +125,11 @@ npm run evidence -- --compare baseline <name>   # add --strict-pixels for phases
 Prints the markdown table for the PR body and exits non-zero on any regression: a story
 disappears, a story renders fewer controls than it used to, axe violations increase, or a control
 loses its accessible name, shrinks below 24×24, or drops below 4.5:1.
+
+**CI runs the compare without `--strict-pixels`** (`.github/workflows/ci.yml`), so on the visually
+inert phases 1 and 3 a pixel move is *reported and not failed* in CI. The strict run in the session
+is the real gate there, and its output belongs on the PR. Measured on phase 1: the exact mistake
+rule **C5** describes moves 6 of 15 stories and still exits 0 without the flag.
 
 The pixel-diff percentage is **not** a gate in phase 2 — MDC changes every component's DOM, so
 everything legitimately moves. Use it to decide which diff images to open.
@@ -176,7 +199,9 @@ don't be alarmed when they persist:
   migration one.
 - **14 distinct runtime advisories** (10 high, 4 moderate), all in `@angular/*` itself — XSS in
   `core` and `compiler`, XSRF token leakage and cache poisoning in `common`. None are patchable on
-  v14; the version walk is the fix. This is the security argument for the migration, not an
+  v14, and — measured on phase 1 — **not one of them clears at v15 or v16 either**: their affected
+  ranges include 15.2.x and 16.2.x, the last releases of both. The version walk is still the fix,
+  but the fix arrives in phase 3, not incrementally. Don't promise a security number before v18. This is the security argument for the migration, not an
   argument against it. npm's own headline for the same closure is `11 high`, because it counts
   vulnerable package paths at their highest severity rather than advisories — the gate counts
   advisories.

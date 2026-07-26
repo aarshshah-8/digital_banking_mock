@@ -29,30 +29,33 @@ and four rows here. The gate counts distinct advisories — the rows below.
 | moderate | `@angular/core` | Angular: Template and Attribute Namespace Sanitization Bypass (XSS) |
 | moderate | `@angular/core` | @angular/core: Angular Template and Dynamic Component Namespace Bypass leading to Cross-Site Scripting (XSS) |
 
-## Build-time only — 40 distinct advisory/advisories
+## Build-time only — 55 distinct advisory/advisories
 
 | Severity | Package |
 |---|---|
 | — | `tar` × 12 |
 | — | `brace-expansion` × 1 |
 | — | `minimatch` × 3 |
+| — | `picomatch` × 2 |
 | — | `piscina` × 1 |
 | — | `playwright` × 1 |
 | — | `postcss` × 3 |
 | — | `serialize-javascript` × 2 |
 | — | `sigstore` × 1 |
 | — | `tmp` × 2 |
+| — | `vite` × 13 |
 | — | `@babel/runtime` × 1 |
 | — | `ajv` × 1 |
 | — | `esbuild` × 1 |
 | — | `uuid` × 1 |
-| — | `webpack` × 3 |
 | — | `webpack-dev-server` × 6 |
 | — | `@babel/core` × 1 |
+| — | `@tootallnate/once` × 1 |
+| — | `webpack` × 2 |
 
 ## Totals reported by npm
 
 ```
-all:     {"info":0,"low":3,"moderate":22,"high":61,"critical":1,"total":87}
+all:     {"info":0,"low":8,"moderate":21,"high":63,"critical":1,"total":93}
 runtime: {"info":0,"low":0,"moderate":0,"high":10,"critical":0,"total":10}
 ```
