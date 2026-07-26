@@ -20,8 +20,11 @@ npm install --legacy-peer-deps
 npx ng build bofa-design-system   # build the library first
 npx ng build digital-banking-shell
 npx ng build advisor-console
-npx ng test
+npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox
 ```
+
+Headless requires a real Chrome binary on `CHROME_BIN`. Playwright's works:
+`export CHROME_BIN=$(node -e "console.log(require('playwright').chromium.executablePath())")`.
 
 ## Migration work
 
