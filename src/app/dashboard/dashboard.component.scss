@@ -1,3 +1,31 @@
+// Layout is plain CSS flexbox. It replaces @angular/flex-layout (archived, no release
+// beyond Angular 14): fxLayout="column" fxLayoutGap="16px" on .dashboard, and
+// fxLayout="row" fxLayoutGap="16px" fxLayout.lt-md="column" + fxFlex="50" on the card row.
+// lt-md is Material's breakpoint alias for `screen and (max-width: 959.98px)`, so the flip
+// is between viewport 960 (row) and 959 (column).
+$bds-lt-md: 959.98px;
+$dashboard-gutter: 16px;
+
 .dashboard {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: $dashboard-gutter;
+}
+
+.dashboard__row {
+  display: flex;
+  flex-direction: row;
+  gap: $dashboard-gutter;
+}
+
+.dashboard__col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media screen and (max-width: $bds-lt-md) {
+  .dashboard__row {
+    flex-direction: column;
+  }
 }

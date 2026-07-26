@@ -9,7 +9,7 @@ counting them together is how a real finding gets lost in tooling noise.
 ## Runtime — 14 distinct advisory/advisories
 
 npm's own headline is different: it counts vulnerable package paths at their highest severity
-({"info":0,"low":0,"moderate":0,"high":11,"critical":0,"total":11}), so one package carrying four advisories is one entry there
+({"info":0,"low":0,"moderate":0,"high":10,"critical":0,"total":10}), so one package carrying four advisories is one entry there
 and four rows here. The gate counts distinct advisories — the rows below.
 
 | Severity | Package | Advisory |
@@ -53,6 +53,6 @@ and four rows here. The gate counts distinct advisories — the rows below.
 ## Totals reported by npm
 
 ```
-all:     {"info":0,"low":3,"moderate":22,"high":59,"critical":1,"total":85}
-runtime: {"info":0,"low":0,"moderate":0,"high":11,"critical":0,"total":11}
+all:     {"info":0,"low":3,"moderate":22,"high":58,"critical":1,"total":84}
+runtime: {"info":0,"low":0,"moderate":0,"high":10,"critical":0,"total":10}
 ```
