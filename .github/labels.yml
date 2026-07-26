@@ -1,0 +1,16 @@
+# Labels for the Angular 14 -> 18 migration workflow.
+#
+# devin:approved is the human gate. It must be restricted to maintainers in repo settings —
+# it is only meaningful if Devin cannot apply it itself.
+
+- name: migration
+  color: "0052CC"
+  description: In scope for the Angular 14 to 18 migration
+
+- name: "devin:approved"
+  color: "0E8A16"
+  description: Devin may write code for this issue. MAINTAINERS ONLY
+
+- name: "devin:blocked"
+  color: "B60205"
+  description: Devin stopped and needs a human decision. See the issue comment
