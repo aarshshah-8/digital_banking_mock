@@ -81,3 +81,33 @@ followed by one PR per consuming app.
 A phase is finished when every box on its tracking issue is checked. Nothing from the next phase
 branches until then.
 
+## Verifying a change
+
+```bash
+npm run build-storybook
+node tools/storybook-evidence.mjs --label <name>
+node tools/storybook-evidence.mjs --compare before <name>   # add --strict-pixels for phases 1 and 3
+```
+
+The comparison prints the markdown table for the PR body and exits non-zero on any regression. It
+fails when a story disappears, when a story renders fewer controls than it used to, when axe
+violations increase, or when a control loses its accessible name, shrinks below 24×24, or drops
+below 4.5:1.
+
+The pixel-diff percentage is **not** a gate in phase 2 — MDC changes every component's DOM, so
+everything legitimately moves. Use it to decide which diff images to open.
+
+`.storybook-evidence/before/` is the committed v14 baseline. Don't regenerate it; every later phase
+compares against it.
+
+### Known pre-existing failures in the baseline
+
+These are in the `before` numbers deliberately. Don't fix them in a migration PR (rule D4), and
+don't be alarmed when they persist:
+
+- **11 × `button-name`** — `bds-button` declares three `<ng-content>` slots, so only
+  `variant="danger"` receives the projected label. Primary and secondary buttons render blank.
+- **2 × `color-contrast`** — the `warning` alert is 3.79:1 against a 4.5:1 floor.
+- **`bds-button--danger` at 3.68:1** — white on Material's `warn` palette. axe scores this story
+  clean; the property measurement is what catches it.
+
