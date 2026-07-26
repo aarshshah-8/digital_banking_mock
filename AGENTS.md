@@ -25,31 +25,62 @@ npx ng test
 
 ## Migration work
 
-Angular 14 → 18. The walk is 14 → 15 → 16 → 17 → 18. All Angular Material MDC work happens on **16**:
-legacy components were deleted in v17 and `ng update` fails while any legacy import remains.
+Angular 14 → 18, in four phases. One issue per phase, one PR per phase.
 
-One component per PR, with the evidence bundle described in the contract (rule E2).
+| Phase | What |
+|---|---|
+| 0 | Harness — Storybook, axe, evidence tool, `before` baseline on v14 |
+| 1 | Walk to v16 — 14→15→16, remove `@angular/flex-layout` (archived, hard-blocks v15+) |
+| 2 | Legacy → MDC — theme and all components |
+| 3 | v16 → v18 — through the v17 gate |
+
+All Material MDC work happens on **v16**: legacy components were deleted in v17 and `ng update`
+fails while any legacy import remains.
+
+Phase 2 is the only phase where the UI is *supposed* to change. Phases 1 and 3 must be visually
+inert, so they're compared with `--strict-pixels`.
 
 ## How work is triggered
 
-Every unit of migration work starts as a GitHub issue opened by a person. Work the issue in this
-order and do not skip ahead:
+Every phase starts as a GitHub issue opened by a person.
 
-1. **Triage** (`devin:triage`). Read the code and post a plan as an issue comment: what you'd change,
-   which consumers are affected, which deleted APIs are in use, which contract rules the component
-   currently violates, and what the risks are. **Write no code at this stage.** Then relabel
-   `devin:awaiting-approval`.
-2. **Wait.** A maintainer adds `devin:approved`. Until that label is present, do not branch, do not
-   edit files, do not open a PR.
-3. **Execute.** Branch from `migration/angular-18`, do the work, assemble the evidence bundle, open a
-   PR with `Closes #<issue>`. Relabel `devin:in-progress`.
-4. **Stop at violations.** If the change would break a rule in `BRAND_CONTRACT.md`, do not work
-   around it and do not weaken the rule. Comment the rule ID, the measured value, and a compliant
-   alternative; label the issue `blocked:waiver`; wait for a maintainer.
-5. **Never merge your own work.** A human approves and merges.
+1. **Triage.** Read the code and post a plan as an issue comment: what you'd change, which consumers
+   are affected, which deleted APIs are in use, and the risks. **Write no code at this stage.**
+2. **Wait for `devin:approved`.** Until that label is present, don't branch, edit files, or open a
+   PR.
+3. **Execute the whole phase** — implementation, tests, evidence — then open a PR with
+   `Closes #<issue>`.
+4. **Stop when blocked.** If the change would break a rule in `BRAND_CONTRACT.md`, or needs a
+   decision you shouldn't make alone, comment why with the measured value, label the issue
+   `devin:blocked`, and stop. Don't work around the rule, and don't open a PR you can't back.
+5. **Never merge your own work.**
 
-You may open new issues yourself — follow-ups you find but shouldn't fix in a scoped PR, and port
-issues from the branch-sync job. You may not apply `devin:approved`, clear `blocked:waiver` or
-`blocked:human`, or merge. Those three are the human gates.
+Two things are humans-only: applying `devin:approved`, and merging. Open follow-up issues freely —
+that's how pre-existing defects get recorded instead of fixed mid-migration (rule D4).
 
-If a task arrives without an issue, open one and triage it rather than starting work.
+## Verifying a phase
+
+```bash
+npm run build-storybook
+node tools/storybook-evidence.mjs --label <phase>
+node tools/storybook-evidence.mjs --compare before <phase>   # add --strict-pixels for phases 1 and 3
+```
+
+The comparison prints the markdown table for the PR body and exits non-zero on any regression. It
+fails when a story disappears, when axe violations increase, or when a control loses its accessible
+name, shrinks below 24×24, or drops below 4.5:1.
+
+The pixel-diff percentage is **not** a gate in phase 2 — MDC changes every component's DOM, so
+everything legitimately moves. Use it to decide which diff images to look at.
+
+`.storybook-evidence/before/` is the committed v14 baseline. Don't regenerate it; every later phase
+compares against it.
+
+### Known pre-existing failures in the baseline
+
+These are in the `before` numbers deliberately. Don't fix them in a migration PR (rule D4), and
+don't be alarmed when they persist:
+
+- **11 × `button-name`** — `bds-button` declares three `<ng-content>` slots, so only
+  `variant="danger"` receives the projected label. Primary and secondary buttons render blank.
+- **2 × `color-contrast`** — the `warning` alert is 3.79:1 against a 4.5:1 floor.

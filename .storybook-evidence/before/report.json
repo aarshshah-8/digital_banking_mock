@@ -1,0 +1,650 @@
+[
+  {
+    "story": "bds-alert-banner--info",
+    "title": "BDS/Alert Banner",
+    "name": "Info",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-alert-banner--success",
+    "title": "BDS/Alert Banner",
+    "name": "Success",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-alert-banner--warning",
+    "title": "BDS/Alert Banner",
+    "name": "Warning",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 1,
+        "help": "Elements must meet minimum color contrast ratio thresholds"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-alert-banner--danger",
+    "title": "BDS/Alert Banner",
+    "name": "Danger",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-alert-banner--all-severities",
+    "title": "BDS/Alert Banner",
+    "name": "All Severities",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": 1,
+        "help": "Elements must meet minimum color contrast ratio thresholds"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-button--primary",
+    "title": "BDS/Button",
+    "name": "Primary",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 1,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-button--secondary",
+    "title": "BDS/Button",
+    "name": "Secondary",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 1,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 2,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-button--danger",
+    "title": "BDS/Button",
+    "name": "Danger",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "Transfer Funds",
+        "contrast": 3.68,
+        "width": 131,
+        "height": 36,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-button--disabled",
+    "title": "BDS/Button",
+    "name": "Disabled",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 1,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": true
+      }
+    ]
+  },
+  {
+    "story": "bds-button--loading",
+    "title": "BDS/Button",
+    "name": "Loading",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 1,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": true
+      }
+    ]
+  },
+  {
+    "story": "bds-button--all-variants",
+    "title": "BDS/Button",
+    "name": "All Variants",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 5,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#4",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 2,
+        "disabled": false
+      },
+      {
+        "key": "button#5",
+        "name": "Danger",
+        "contrast": 3.68,
+        "width": 79,
+        "height": 36,
+        "disabled": false
+      },
+      {
+        "key": "button#6",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": true
+      },
+      {
+        "key": "button#7",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 2,
+        "disabled": true
+      },
+      {
+        "key": "button#8",
+        "name": "Disabled",
+        "contrast": 1,
+        "width": 89,
+        "height": 36,
+        "disabled": true
+      },
+      {
+        "key": "button#9",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": true
+      }
+    ]
+  },
+  {
+    "story": "bds-card--elevated",
+    "title": "BDS/Card",
+    "name": "Elevated",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-card--flat",
+    "title": "BDS/Card",
+    "name": "Flat",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-card--no-title",
+    "title": "BDS/Card",
+    "name": "No Title",
+    "violations": [],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "story": "bds-card--with-actions",
+    "title": "BDS/Card",
+    "name": "With Actions",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "nodes": 2,
+        "help": "Buttons must have discernible text"
+      }
+    ],
+    "controls": [
+      {
+        "key": "button#0",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#1",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#2",
+        "name": "Set string",
+        "contrast": 1,
+        "width": 0,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#3",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 0,
+        "disabled": false
+      },
+      {
+        "key": "button#4",
+        "name": "",
+        "contrast": null,
+        "width": 64,
+        "height": 2,
+        "disabled": false
+      }
+    ]
+  }
+]

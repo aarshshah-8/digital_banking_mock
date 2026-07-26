@@ -1,0 +1,54 @@
+name: Migration phase
+description: Trigger one phase of the Angular 14 to 18 migration
+title: "Phase <n>: <name>"
+labels: ["migration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per phase. Devin triages it and posts a plan; it writes no code until a
+        maintainer adds `devin:approved`. It then runs the whole phase — implementation, tests,
+        evidence — and opens a PR, or stops with `devin:blocked` if it can't meet the done-when.
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options:
+        - "0 — Harness: Storybook, axe, evidence tool, before baseline"
+        - "1 — Walk to v16: 14 to 15 to 16, remove @angular/flex-layout"
+        - "2 — Legacy to MDC: theme and all components"
+        - "3 — v16 to v18: through the v17 gate"
+    validations:
+      required: true
+
+  - type: input
+    id: baseline
+    attributes:
+      label: Evidence baseline to compare against
+      description: The --label captured before this phase started.
+      placeholder: before
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      value: |
+        - [ ] `bofa-design-system`, `digital-banking-shell` and `advisor-console` all build
+        - [ ] `npx ng test` passes
+        - [ ] `npm run build-storybook` succeeds and every story renders
+        - [ ] `node tools/storybook-evidence.mjs --compare <baseline> <this phase>` exits 0
+        - [ ] No unresolved `TODO(mdc-migration):`
+        - [ ] No rule in `BRAND_CONTRACT.md` violated
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Known traps for this phase
+      description: Anything already known that Devin should not have to rediscover.
+    validations:
+      required: false

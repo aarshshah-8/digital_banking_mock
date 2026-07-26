@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "migration/**"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+
+      # The library must build first: both apps consume it from dist/.
+      - run: npx ng build bofa-design-system
+      - run: npx ng build digital-banking-shell
+      - run: npx ng build advisor-console
+
+      - run: npx ng test --watch=false --browsers=ChromeHeadless
+
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run build-storybook
+
+      # Fails if a story stops rendering, axe violations increase, or any control loses its
+      # accessible name, shrinks below 24px, or drops below 4.5:1.
+      - name: Capture and compare against the committed baseline
+        run: |
+          node tools/storybook-evidence.mjs --label pr
+          node tools/storybook-evidence.mjs --compare before pr
+
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-evidence
+          path: .storybook-evidence/
