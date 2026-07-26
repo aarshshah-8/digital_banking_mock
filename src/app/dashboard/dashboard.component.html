@@ -1,0 +1,26 @@
+<!--
+  NOTE (intentional legacy pattern): fxLayout/fxFlex directives come from
+  @angular/flex-layout, which was archived by the Angular team and never
+  published a stable release beyond Angular 14 support. This is a well
+  documented, real blocker teams hit on 14 -> 15+ upgrades and generally
+  requires migrating layout to CSS Grid/Flexbox directly.
+-->
+<div class="dashboard" fxLayout="column" fxLayoutGap="16px">
+  <bds-alert-banner severity="info" *ngIf="!loading">
+    Session established for {{ session?.userId }}. MFA verification pending.
+  </bds-alert-banner>
+
+  <div fxLayout="row" fxLayoutGap="16px" fxLayout.lt-md="column">
+    <bds-card title="Account Balance" fxFlex="50">
+      <div *ngIf="loading">Loading balances…</div>
+      <div *ngFor="let b of balances">
+        {{ b.balance | currency:b.currency }} <small>as of {{ b.asOf | date:'short' }}</small>
+      </div>
+    </bds-card>
+
+    <bds-card title="Quick Actions" fxFlex="50">
+      <bds-button variant="primary" (bdsClick)="onTransferClick()">Transfer Funds</bds-button>
+      <bds-button variant="secondary">View Statements</bds-button>
+    </bds-card>
+  </div>
+</div>
