@@ -111,6 +111,11 @@ loses its accessible name, shrinks below 24×24, or drops below 4.5:1.
 The pixel-diff percentage is **not** a gate in phase 2 — MDC changes every component's DOM, so
 everything legitimately moves. Use it to decide which diff images to open.
 
+**What this gate cannot see.** Stories render at a fixed **900px** viewport, which is below the
+dashboard's 960px breakpoint — so the desktop row layout is never captured, and a responsive
+regression passes cleanly. Anything breakpoint-dependent has to be verified by driving the running
+app. The v14 numbers to hold Phase 1 to are recorded on issue #2.
+
 ### 2. Did anything downstream break?
 
 ```bash
@@ -160,6 +165,9 @@ don't be alarmed when they persist:
 
 - **11 × `button-name`** — `bds-button` declares three `<ng-content>` slots, so only
   `variant="danger"` receives the projected label. Primary and secondary buttons render blank.
+  In the running app the primary measures **64 × 0 px**, so a mouse click passes through it to
+  `<body>`; `bdsClick` fires only via keyboard. Drive that control with `Tab` + `Enter`, or a
+  pre-existing defect will read as a migration regression.
 - **2 × `color-contrast`** — the `warning` alert is 3.79:1 against a 4.5:1 floor.
 - **`bds-button--danger` at 3.68:1** — white on Material's `warn` palette. axe scores this story
   clean; the property measurement is what catches it.
@@ -169,4 +177,6 @@ don't be alarmed when they persist:
 - **11 high-severity runtime advisories**, all in `@angular/*` itself — XSS in `core` and
   `compiler`, XSRF token leakage in `common`. None are patchable on v14; the version walk is the
   fix. This is the security argument for the migration, not an argument against it.
+- **`advisor-console` loads with no Material core theme at all** (issue #11), so the two consumers
+  don't look alike today and phase 2 will land differently in each.
 
