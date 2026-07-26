@@ -1,5 +1,7 @@
 node_modules/
 dist/
+# Generated on demand from two committed baselines; not worth versioning.
+.storybook-evidence/diff-*/
 .angular/
 .vscode/
 *.log
