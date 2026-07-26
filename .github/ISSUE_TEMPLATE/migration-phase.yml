@@ -19,7 +19,7 @@ body:
     attributes:
       label: Phase
       options:
-        - "0 — Harness: Storybook, axe, evidence tool, before baseline"
+        - "0 — Harness: Storybook, axe, evidence, API and dependency reports"
         - "1 — Walk to v16: 14 to 15 to 16, remove @angular/flex-layout"
         - "2 — Legacy to MDC: theme and all components"
         - "3 — v16 to v18: through the v17 gate"
@@ -30,8 +30,10 @@ body:
     id: baseline
     attributes:
       label: Evidence baseline to compare against
-      description: The --label captured before this phase started.
-      placeholder: before
+      description: >
+        Leave as `baseline` unless you deliberately want a different one — it resolves through
+        .storybook-evidence/baseline.json, so it stays correct across migrations.
+      value: baseline
     validations:
       required: true
 
@@ -57,9 +59,12 @@ body:
         - [ ] `bofa-design-system`, `digital-banking-shell` and `advisor-console` all build
         - [ ] `npx ng test` passes
         - [ ] `npm run build-storybook` succeeds and every story renders
-        - [ ] `node tools/storybook-evidence.mjs --compare <baseline> <this phase>` exits 0
+        - [ ] `npm run evidence -- --compare <baseline> <this phase>` exits 0
+        - [ ] `npm run api-report -- --check` exits 0, or the public API change is argued and accepted
+        - [ ] `npm run deps-report -- --check` exits 0
         - [ ] No unresolved `TODO(mdc-migration):`
         - [ ] No rule in `BRAND_CONTRACT.md` violated
+        - [ ] What the phase taught is written back into `AGENTS.md` or `BRAND_CONTRACT.md`
     validations:
       required: true
 

@@ -2,12 +2,19 @@
  * Builds the evidence bundle for a migration phase: per-story screenshots, an axe-core
  * report, and measured properties of every rendered control. Then compares two labels.
  *
- *   node tools/storybook-evidence.mjs --label before
- *   node tools/storybook-evidence.mjs --label after
- *   node tools/storybook-evidence.mjs --compare before after [--strict-pixels]
+ *   node tools/storybook-evidence.mjs --label <name>
+ *   node tools/storybook-evidence.mjs --compare baseline <name> [--strict-pixels]
+ *   node tools/storybook-evidence.mjs --promote <name> --note "..."
  *
  * Everything is written to .storybook-evidence/<label>/. Expects `npm run build-storybook`
  * to have been run against the commit you are labelling.
+ *
+ * Baselines
+ * ---------
+ * `baseline` resolves through .storybook-evidence/baseline.json rather than being a fixed label.
+ * A frozen "before" would make this harness single-use: the next migration's before-state is this
+ * migration's after-state. When a migration completes, --promote records its final label as the
+ * baseline the following one is measured against, and keeps the previous ones as history.
  *
  * What is a gate and what is not
  * ------------------------------
@@ -32,6 +39,7 @@ import { PNG } from 'pngjs';
 const STORYBOOK_DIR = resolve('dist/storybook/bofa-design-system');
 const EVIDENCE_DIR = resolve('.storybook-evidence');
 const AXE_PATH = resolve('node_modules/axe-core/axe.min.js');
+const BASELINE_FILE = resolve(EVIDENCE_DIR, 'baseline.json');
 const VIEWPORT = { width: 900, height: 600 };
 
 /** WCAG 2.1 AA, mirroring BRAND_CONTRACT.md A1 and B2. */
@@ -184,6 +192,36 @@ async function capture(label) {
 
 const axeCount = (entry) => entry.violations.reduce((n, v) => n + v.nodes, 0);
 
+async function readBaseline() {
+  if (!existsSync(BASELINE_FILE)) {
+    throw new Error(`No ${BASELINE_FILE}. Capture a label and run --promote <label> to establish one.`);
+  }
+  return JSON.parse(await readFile(BASELINE_FILE, 'utf8'));
+}
+
+/** `baseline` is an alias, so a phase never hard-codes which state it is measured against. */
+async function resolveLabel(label) {
+  return label === 'baseline' ? (await readBaseline()).current : label;
+}
+
+async function promote(label, note) {
+  if (!existsSync(join(EVIDENCE_DIR, label, 'report.json'))) {
+    throw new Error(`No captured evidence for "${label}". Run --label ${label} first.`);
+  }
+  const previous = existsSync(BASELINE_FILE) ? await readBaseline() : { current: null, history: [] };
+  const next = {
+    current: label,
+    history: [
+      ...(previous.history ?? []),
+      ...(previous.current ? [{ label: previous.current, retiredOn: new Date().toISOString().slice(0, 10) }] : []),
+    ],
+    note,
+  };
+  await writeFile(BASELINE_FILE, JSON.stringify(next, null, 2) + '\n');
+  console.log(`Baseline is now "${label}"${previous.current ? ` (was "${previous.current}")` : ''}.`);
+  console.log('Commit .storybook-evidence/baseline.json together with the captured directory.');
+}
+
 async function pixelDiff(beforeLabel, afterLabel, storyId) {
   const load = async (label) => {
     const file = join(EVIDENCE_DIR, label, `${storyId}.png`);
@@ -304,11 +342,19 @@ async function compare(beforeLabel, afterLabel, strictPixels) {
 const args = process.argv.slice(2);
 const labelIdx = args.indexOf('--label');
 const compareIdx = args.indexOf('--compare');
+const promoteIdx = args.indexOf('--promote');
+const noteIdx = args.indexOf('--note');
 
 if (compareIdx !== -1) {
-  await compare(args[compareIdx + 1], args[compareIdx + 2], args.includes('--strict-pixels'));
+  await compare(
+    await resolveLabel(args[compareIdx + 1]),
+    await resolveLabel(args[compareIdx + 2]),
+    args.includes('--strict-pixels')
+  );
 } else if (labelIdx !== -1) {
   await capture(args[labelIdx + 1]);
+} else if (promoteIdx !== -1) {
+  await promote(args[promoteIdx + 1], noteIdx === -1 ? undefined : args[noteIdx + 1]);
 } else {
   const labels = existsSync(EVIDENCE_DIR) ? await readdir(EVIDENCE_DIR) : [];
   console.log('Usage:');
