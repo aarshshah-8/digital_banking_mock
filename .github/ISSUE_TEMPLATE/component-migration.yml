@@ -1,0 +1,35 @@
+name: Component migration
+description: Migrate one bofa-design-system component to Angular Material MDC
+title: "Migrate <component> to MDC"
+labels: ["migration", "devin:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One component per issue. Devin will triage this and post a plan; it won't write code
+        until a maintainer adds the `devin:approved` label.
+
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      description: Directory under projects/bofa-design-system/src/lib
+      placeholder: button
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything already known
+      description: Custom SCSS overrides, deleted APIs in use, consumers that will be affected. Leave blank if unknown — triage will find them.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Scope
+      options:
+        - label: This issue covers one component only, and the PR will carry the full evidence bundle (BRAND_CONTRACT.md rule E2)
+          required: true

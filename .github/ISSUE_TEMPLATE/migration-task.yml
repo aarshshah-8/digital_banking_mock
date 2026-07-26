@@ -1,0 +1,40 @@
+name: Migration task
+description: Any other unit of the Angular 14 to 18 migration (version walk, theme, app, tooling)
+title: "<task>"
+labels: ["migration", "devin:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Devin will triage this and post a plan; it won't write code until a maintainer adds the
+        `devin:approved` label.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Scoping / inventory (no code)
+        - Workspace version walk
+        - Theme migration
+        - Downstream app migration
+        - Tooling / CI / harness
+        - Port from main
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: How a reviewer will know this is finished.
+    validations:
+      required: true

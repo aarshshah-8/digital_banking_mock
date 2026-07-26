@@ -1,0 +1,36 @@
+# Labels for the Angular 14 -> 18 migration workflow.
+# The three gate labels (devin:approved, blocked:waiver, blocked:human) must be restricted to
+# maintainers in repo settings — they are the human-in-the-loop permission boundary, and they are
+# only meaningful if Devin cannot set them itself.
+
+- name: migration
+  color: "0052CC"
+  description: In scope for the Angular 14 to 18 migration
+
+- name: "devin:triage"
+  color: "D4C5F9"
+  description: Awaiting Devin's plan comment. Set automatically when the issue is opened
+
+- name: "devin:awaiting-approval"
+  color: "FBCA04"
+  description: Plan posted. Needs a maintainer to approve before any code is written
+
+- name: "devin:approved"
+  color: "0E8A16"
+  description: GATE 1 - Devin may write code for this issue. MAINTAINERS ONLY
+
+- name: "devin:in-progress"
+  color: "1D76DB"
+  description: A Devin session is working this issue
+
+- name: "blocked:waiver"
+  color: "B60205"
+  description: GATE 3 - a BRAND_CONTRACT.md rule is violated. Only a maintainer can accept it
+
+- name: "blocked:human"
+  color: "B60205"
+  description: Needs a decision Devin should not make on its own
+
+- name: "devin:port"
+  color: "5319E7"
+  description: Conflict ported from main by the daily sync session
