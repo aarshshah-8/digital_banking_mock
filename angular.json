@@ -141,6 +141,30 @@
             "tsConfig": "projects/bofa-design-system/tsconfig.spec.json",
             "karmaConfig": "projects/bofa-design-system/karma.conf.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/bofa-design-system/.storybook",
+            "browserTarget": "bofa-design-system:build",
+            "compodoc": false,
+            "port": 6006,
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/bofa-design-system/.storybook",
+            "browserTarget": "bofa-design-system:build",
+            "compodoc": false,
+            "outputDir": "dist/storybook/bofa-design-system",
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+            ]
+          }
         }
       }
     },

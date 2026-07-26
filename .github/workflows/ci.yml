@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "migration/**"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+
+      # The library must build first: both apps consume it from dist/.
+      - run: npx ng build bofa-design-system
+      - run: npx ng build digital-banking-shell
+      - run: npx ng build advisor-console
+
+      - run: npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox
+
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --legacy-peer-deps
+      - run: npm run build-storybook
