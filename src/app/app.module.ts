@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 
 import { BofaDesignSystemModule } from 'bofa-design-system';
@@ -20,7 +19,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     MatIconModule,
     BofaDesignSystemModule,
     AppRoutingModule
