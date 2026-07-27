@@ -52,7 +52,7 @@ title: string;
 ### `BofaDesignSystemModule` — NgModule
 
 - **Declares:** `BdsAlertBannerComponent`, `BdsButtonComponent`, `BdsCardComponent`
-- **Imports:** `CommonModule`, `MatButtonModule`, `MatCardModule`, `MatIconModule`
+- **Imports:** `CommonModule`, `MatIconModule`, `MatLegacyButtonModule`, `MatLegacyCardModule`
 - **Exports:** `BdsAlertBannerComponent`, `BdsButtonComponent`, `BdsCardComponent`
 
 ## Types and constants
@@ -78,11 +78,11 @@ BDS_SPACING_TOKENS: { readonly xs: "4px"; readonly sm: "8px"; readonly md: "16px
 ### `BdsAlertSeverity`
 
 ```ts
-export declare type BdsAlertSeverity = 'info' | 'success' | 'warning' | 'danger';
+export type BdsAlertSeverity = 'info' | 'success' | 'warning' | 'danger';
 ```
 
 ### `BdsButtonVariant`
 
 ```ts
-export declare type BdsButtonVariant = 'primary' | 'secondary' | 'danger';
+export type BdsButtonVariant = 'primary' | 'secondary' | 'danger';
 ```

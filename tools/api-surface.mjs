@@ -45,11 +45,20 @@ function angularDecl(member) {
 }
 
 /** `{ "variant": "variant"; "disabled": "disabled"; }` -> ['disabled', 'variant'] — sorted, so a
- *  reordered declaration doesn't read as an API change. */
+ *  reordered declaration doesn't read as an API change.
+ *
+ *  Angular 16 changed how inputs are encoded: an input is now an object rather than a string,
+ *  `{ "title": { "alias": "title"; "required": false; } }`, so that required inputs can be
+ *  expressed. Both shapes are read here, and they render the same when nothing really moved —
+ *  otherwise every component in the report would show a spurious change on a version walk. */
 function bindings(literal) {
   if (!literal || literal === 'never' || literal === '{}') return [];
-  return [...literal.matchAll(/"([^"]+)"\s*:\s*"([^"]+)"/g)]
-    .map(([, prop, name]) => (prop === name ? name : `${name} (as ${prop})`))
+  return [...literal.matchAll(/"([^"]+)"\s*:\s*(?:"([^"]+)"|\{([^}]*)\})/g)]
+    .map(([, prop, name, object]) => {
+      const alias = name ?? object?.match(/"alias"\s*:\s*"([^"]+)"/)?.[1] ?? prop;
+      const required = /"required"\s*:\s*true/.test(object ?? '');
+      return `${alias === prop ? prop : `${alias} (as ${prop})`}${required ? ' (required)' : ''}`;
+    })
     .sort();
 }
 

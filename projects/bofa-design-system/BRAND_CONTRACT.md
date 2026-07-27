@@ -44,9 +44,20 @@ adjacent colour.
   `.mat-mdc-tab`, `.mat-tab-label-active` → `.mdc-tab--active`, some have no equivalent.
 - **C4** — Never style `.mdc-*` internals, and no `::ng-deep` or `!important` to force appearance.
   MDC's internal DOM is explicitly unstable.
-- **C5** — `ng update @angular/material@16` rewrites TS imports but leaves the prebuilt theme path in
-  `angular.json` and SCSS `@use` statements pointing at MDC. Fix both by hand, or the build goes
-  green with MDC styles on legacy DOM.
+- **C5** — `ng update @angular/material@15|16` rewrites TS imports but leaves the prebuilt theme path
+  in `angular.json` and SCSS `@use` statements pointing at MDC. Fix both by hand, or the build goes
+  green with MDC styles on legacy DOM. Measured on the 14 → 15 step (PR #15): leaving the theme path
+  alone moves **6 of 15 stories** by 0.2–0.8% — enough to change typography and card metrics,
+  little enough that only `--strict-pixels` fails it. Two details the guide doesn't spell out:
+  - the legacy theme lives in a **new directory** as well as under a new name —
+    `@angular/material/legacy-prebuilt-themes/legacy-indigo-pink.css`, not
+    `prebuilt-themes/legacy-indigo-pink.css`;
+  - the schematic is **partial**, not just incomplete on styles. On this workspace it rewrote a
+    *spec* file to `MatLegacyButtonModule` and left the library's own `NgModule` importing
+    `MatButtonModule`/`MatCardModule` from the MDC entry points. MDC keeps the legacy selectors
+    (`mat-card`, `button[mat-raised-button]`), so that compiles, renders and tests green while
+    quietly serving MDC components. After any `ng update` of Material, grep the whole workspace for
+    `@angular/material/` and check every import by hand.
 - **C6** — Deleted APIs to grep for: `appearance="legacy"|"standard"`, `floatLabel="never"`,
   `matPrefix`/`matSuffix` (now `matIconPrefix`/`matTextPrefix`).
 - **C7** — No unresolved `TODO(mdc-migration):` at merge.
