@@ -4,3 +4,9 @@
   text-transform: none;
   letter-spacing: 0.01em;
 }
+
+/* BDS_COLOR_TOKENS.danger on BDS_COLOR_TOKENS.textInverse — 6.54:1. */
+.bds-button.bds-button--danger:not(:disabled) {
+  background-color: #b3261e;
+  color: #ffffff;
+}

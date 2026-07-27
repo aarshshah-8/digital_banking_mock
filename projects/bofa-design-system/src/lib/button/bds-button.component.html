@@ -1,11 +1,3 @@
-<!--
-  NOTE (intentional v14 pattern): this uses the pre-MDC Material button API.
-  When @angular/material is upgraded past v15, `ng update` will either
-  rewrite these to the MatLegacy* equivalents (if the legacy import path is
-  kept) or require moving to the MDC-based `mat-button` API surface. This is
-  one of the real breaking-change points in a 14 -> 18 upgrade for any app
-  built on Material, not something specific to this demo app.
--->
 <button
   mat-raised-button
   *ngIf="variant === 'primary'"
@@ -30,8 +22,7 @@
 <button
   mat-raised-button
   *ngIf="variant === 'danger'"
-  color="warn"
-  class="bds-button"
+  class="bds-button bds-button--danger"
   [disabled]="disabled || loading"
   (click)="onClick($event)"
 >

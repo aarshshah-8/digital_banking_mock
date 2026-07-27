@@ -52,7 +52,7 @@ title: string;
 ### `BofaDesignSystemModule` — NgModule
 
 - **Declares:** `BdsAlertBannerComponent`, `BdsButtonComponent`, `BdsCardComponent`
-- **Imports:** `CommonModule`, `MatIconModule`, `MatLegacyButtonModule`, `MatLegacyCardModule`
+- **Imports:** `CommonModule`, `MatButtonModule`, `MatIconModule`, `MatLegacyCardModule`
 - **Exports:** `BdsAlertBannerComponent`, `BdsButtonComponent`, `BdsCardComponent`
 
 ## Types and constants
